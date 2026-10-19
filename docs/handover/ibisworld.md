@@ -28,3 +28,7 @@ Best known for: IBISWorld contains industry reports written by in-house analysts
 * Industry Risk Ratings Reports (quantifying non-financial risks of industries) ; last reviewed date is May 2026; Researchers -  Low
 * Teaching/Students - High
 * Commercial/Industry/Entrepreneurs - Average ; no FAQ as yet for IBISWorld.
+
+<!-- Third paste by the operator on 2026-10-19: the IBISWorld review text, rewritten by the operator. Verbatim; publish exactly as written. The relevancy ratings above belong to this review. -->
+
+It is a surprisingly well-liked and non-fussy resource! It is relatively easy to use, and popular with both librarians and students. They only keep the current version of the reports in the platform, but you should be able to request older versions from your rep as needed. IBISWorld generally isn’t used by academic researchers because it focuses on current reports, rather than historical data. The platform is fairly easy to use, especially after the re-design around 2021 where they improved the search functionality (which improved again in 2023). It helps that its content is primarily just textual reports, which makes it easy for students to search by company or product, instead of NAICS code.
