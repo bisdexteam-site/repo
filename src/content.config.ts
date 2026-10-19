@@ -42,10 +42,10 @@ export const RELEVANCY_LEVELS = ["Low", "Average", "High"] as const;
  * options, in the form's wording.
  */
 export const DESCRIPTORS = {
-  role: ["Library administrator"],
+  role: ["Library administrator", "Business librarian"],
   institutionType: ["doctoral research university"],
   experience: ["10+ years of experience"],
-  relationship: ["evaluator/selector"],
+  relationship: ["evaluator/selector", "administrator"],
 } as const;
 
 const sources = defineCollection({

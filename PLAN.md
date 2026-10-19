@@ -378,7 +378,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 ### Phase 6: Remaining launch sources
 
-- [ ] **P6-T1 · Second launch source** (Q6)
+- [x] **P6-T1 · Second launch source** (Q6): FactSet
 - [ ] **P6-T2 · Third launch source** (Q6)
 - [ ] **P6-T3 · Fourth launch source** (Q6)
   - Each: follow 5.6, add the vendor if new, and link alternatives that now exist in BISdex.
@@ -440,6 +440,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-19 | Web Analytics (Cloudflare docs): automatic setup only covers sites proxied through Cloudflare, so a `workers.dev` site uses the manual JS snippet from Web Analytics > Manage site, placed before `</body>`. Only the token is site-specific; it goes in `ANALYTICS_TOKEN`. A custom domain later needs its own hostname added in Web Analytics. |
 | 2026-10-19 | Pages CMS questions in 5.3 left open until Pages CMS is turned on; `.pages.yml` marks any suspected gaps in comments. (operator) |
 | 2026-10-19 | Until Q3 arrives, each descriptor list holds only the IBISWorld review's values as the operator gave them (Library administrator; doctoral research university; 10+ years of experience; evaluator/selector), mapped to role, institution type, experience and relationship. Replaced by the form's exact wording when Q3 arrives. |
+| 2026-10-19 | FactSet review: the handover's Researchers rating "Low to Average" is published as Average; the source's last-reviewed date and the review date are both July 2024; no accessibility grade yet; descriptor role "Business librarian", relationship "administrator" (added to the interim descriptor lists). (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -448,6 +449,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P6-T1 · FactSet source, review (2024-07) and vendor; handover saved · vendor URL is `[Vendor URL]`; old Google Site links dropped from Best known for and Alternatives; one date given, used for both last-reviewed and review dates
 - 2026-10-19 · P4-T3 · GradeTile (graded and not yet reviewed), Reviews section with call-to-action panel, ReviewItem with RelevancyMeter, newest first with count · "How grades are assigned" links to /editorial-policy/#grades, which 404s until P4-T5
 - 2026-10-19 · P4-T2 · /sources/[slug]/ with page top, "On this page", SourceSection, Description, Alternatives, Content, AI Features, Use Cases and FAQ; empty sections and their links omitted · vendor shows unlinked while its URL is a placeholder
 - 2026-10-19 · P4-T1 · home index from the sources collection, letter-grouped with count; `INDEX_BY_LETTER` in config switches to a plain list; src/lib/content.ts loads content once and fails the build on broken references · none

@@ -1,3 +1,6 @@
 - id: ibisworld
   name: IBISWorld
   url: "[Vendor URL]"
+- id: factset
+  name: FactSet Research Systems, Inc.
+  url: "[Vendor URL]"
