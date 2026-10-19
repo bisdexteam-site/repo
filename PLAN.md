@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done, plus the About and Editorial Policy pages: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q2 | Editorial Policy and Disclaimer copy (the brief's drafts); About copy received 2026-10-19 | Operator | P2-T2, P4-T5 |
+| Q2 | Disclaimer copy (the brief's draft); About and Editorial Policy copy received 2026-10-19. Also: where the accessibility grade scale (`#grades`) goes, since the Editorial Policy copy has no grades section | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
@@ -442,6 +442,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-19 | Until Q3 arrives, each descriptor list holds only the IBISWorld review's values as the operator gave them (Library administrator; doctoral research university; 10+ years of experience; evaluator/selector), mapped to role, institution type, experience and relationship. Replaced by the form's exact wording when Q3 arrives. |
 | 2026-10-19 | FactSet review: the handover's Researchers rating "Low to Average" is published as Average; the source's last-reviewed date and the review date are both July 2024; no accessibility grade yet; descriptor role "Business librarian", relationship "administrator" (added to the interim descriptor lists). (operator) |
 | 2026-10-19 | About page copy comes from the editors' handover ("About BISdex"): lead paragraph, What we cover, Our history. It replaces the About sections listed in DESIGN.md section 6; no Who we are, Independence, How to cite or Contact sections. (operator) |
+| 2026-10-19 | Editorial Policy copy comes from the editors' handover ("BISdex Editorial Policy", updated Oct 19, 2026), with its own eleven sections. It replaces the Editorial Policy sections listed in DESIGN.md section 7 and section 4. The "Updated" line is the intro band lead; the sidebar lists the page's h2s. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -450,6 +451,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · Editorial Policy copy (handover saved) and /editorial-policy/ page with "On this page" sidebar; Editorial Policy part of P2-T2 and P4-T5 done · copy has no Accessibility grades section, so /editorial-policy/#grades lands at the page top (Q2); Disclaimer copy still needed
 - 2026-10-19 · operator request · About copy (handover saved) and /about/ page from pages/about.md; About part of P2-T2 and P4-T5 done · Editorial Policy and Disclaimer copy still needed (Q2); P2-T2 and P4-T5 stay unchecked until they are done
 - 2026-10-19 · P6-T1 · FactSet source, review (2024-07) and vendor; handover saved · vendor URL is `[Vendor URL]`; old Google Site links dropped from Best known for and Alternatives; one date given, used for both last-reviewed and review dates
 - 2026-10-19 · P4-T3 · GradeTile (graded and not yet reviewed), Reviews section with call-to-action panel, ReviewItem with RelevancyMeter, newest first with count · "How grades are assigned" links to /editorial-policy/#grades, which 404s until P4-T5

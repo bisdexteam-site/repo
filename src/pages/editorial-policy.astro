@@ -1,0 +1,109 @@
+---
+import { getEntry, render } from "astro:content";
+import IntroBand from "@/components/IntroBand.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const page = await getEntry("pages", "editorial-policy");
+if (!page) throw new Error("Missing src/content/pages/editorial-policy.md");
+
+const { Content, headings } = await render(page);
+const sections = headings.filter((heading) => heading.depth === 2);
+---
+
+<BaseLayout
+  title="Editorial Policy"
+  description="How BISdex accepts, moderates and publishes reviews of business information sources."
+>
+  <IntroBand title={page.data.title} lead={page.data.lead} />
+  <div class="container policy">
+    <nav class="policy__toc" aria-labelledby="policy-toc-label">
+      <h2 id="policy-toc-label" class="policy__toc-label">
+        On this page
+      </h2>
+      <ul class="policy__toc-list">
+        {sections.map((section) => (
+          <li>
+            <a href={`#${section.slug}`}>{section.text}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <article class="text-page">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .policy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-7);
+    align-items: flex-start;
+    padding-block: var(--space-7) var(--space-8);
+  }
+
+  .policy__toc {
+    flex: 1 1 220px;
+    max-width: 260px;
+    border-top: var(--rule-strong);
+    padding-top: var(--space-4);
+  }
+
+  .policy__toc-label {
+    color: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    font-size: var(--text-eyebrow);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .policy__toc-list {
+    margin-top: var(--space-3);
+    padding: 0;
+    list-style: none;
+  }
+
+  .policy__toc-list li + li {
+    margin-top: var(--space-2);
+  }
+
+  .text-page {
+    flex: 999 1 480px;
+    min-width: 0;
+    max-width: var(--width-reading);
+  }
+
+  .text-page :global(h2) {
+    margin-top: var(--space-7);
+    scroll-margin-top: var(--space-5);
+  }
+
+  .text-page :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .text-page :global(h2 + *) {
+    margin-top: var(--space-4);
+  }
+
+  .text-page :global(:is(p, ul, ol) + :is(p, ul, ol)) {
+    margin-top: var(--space-4);
+  }
+
+  .text-page :global(:is(ul, ol)) {
+    padding-left: var(--space-5);
+  }
+
+  .text-page :global(li + li) {
+    margin-top: var(--space-2);
+  }
+
+  @media (max-width: 819px) {
+    .policy__toc {
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+</style>
