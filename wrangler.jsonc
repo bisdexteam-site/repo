@@ -10,4 +10,6 @@
     // Pages are built as <route>/index.html and served at <route>/.
     "html_handling": "auto-trailing-slash",
   },
+  // Branch previews use the same settings as production; the block must exist.
+  "previews": {},
 }

@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. P0-T1, P3-T1 and P3-T2 done: scaffold builds with tokens, fonts, base styles and the shared page layout (header, footer, intro band, 404). Next: P0-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. P0-T1, P0-T2, P3-T1 and P3-T2 done: scaffold builds with tokens, fonts, base styles and the shared page layout (header, footer, intro band, 404); Cloudflare behavior checked against the docs. Next: finish P0-T3 (operator: Worker rename, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -166,7 +166,7 @@ Every published review shows the "Verified by BISdex editors" badge; there is no
 
 ### 5.3 Pages CMS readiness
 
-Pages CMS is not turned on. `.pages.yml` mirrors the collections in 5.2 (same fields, labels, required flags, enum options) so turning it on later only needs the operator to install its GitHub App. Unknowns, for the P0-T2 spike: whether it supports references between collections, nested lists of objects, and a Markdown field inside frontmatter. Where it doesn't, note the gap in `.pages.yml` comments and the decision log. Don't change the schema to suit it.
+Pages CMS is not turned on. `.pages.yml` mirrors the collections in 5.2 (same fields, labels, required flags, enum options) so turning it on later only needs the operator to install its GitHub App. Unknowns, left open until Pages CMS is turned on (operator, 2026-10-19): whether it supports references between collections, nested lists of objects, and a Markdown field inside frontmatter. Where it doesn't, note the gap in `.pages.yml` comments and the decision log. Don't change the schema to suit it.
 
 ### 5.4 Design and theme
 
@@ -279,14 +279,14 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - One placeholder `src/pages/index.astro` with a single h1 so the build has output.
   - **Done when:** `npm run check` and `npm run build` pass from a clean clone, and `dist/index.html` exists.
 
-- [ ] **P0-T2 · Spike: Cloudflare and Pages CMS unknowns**
+- [x] **P0-T2 · Spike: Cloudflare and Pages CMS unknowns**
   - From official docs only, answer: trailing-slash and 404 behavior for Workers static assets; how preview URLs work for non-production branches in Workers Builds; how Web Analytics is added on a `workers.dev` address (manual beacon or automatic); the Pages CMS questions in 5.3.
   - Record the answers in section 10. Change `wrangler.jsonc` only if the answers require it.
   - **Done when:** each question has a decision-log line or an open question in section 9.
   - *Depends on P0-T1.*
 
 - [ ] **P0-T3 · Connect Cloudflare (operator)**
-  - Create the Worker from `bisdexteam-site/repo` in the Cloudflare dashboard: build `npm run build`, deploy `npx wrangler deploy`, production branch `main`. Turn on preview URLs for non-production branches.
+  - Create the Worker from `bisdexteam-site/repo` in the Cloudflare dashboard: build `npm run build`, deploy `npx wrangler deploy`, production branch `main`. Turn on **Enable Preview Builds** (Settings > Build > Branch control) with the preview command `npx wrangler preview`.
   - Send the resulting `workers.dev` address to an agent to fill in `SITE_URL` (Q4).
   - **Done when:** a push to `main` deploys and the address loads.
   - *Depends on P0-T1.*
@@ -301,7 +301,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - *Depends on P0-T1. Descriptor enums need Q3; until then use the placeholder value `[Descriptor value]` and leave the task unchecked.*
 
 - [ ] **P1-T2 · Pages CMS config**
-  - Write `.pages.yml` matching 5.2, using the P0-T2 findings.
+  - Write `.pages.yml` matching 5.2, with the open unknowns in 5.3 noted as comments where they apply.
   - **Done when:** every schema field appears in `.pages.yml` with the same name, label and required flag, and gaps are commented.
   - *Depends on P0-T2, P1-T1.*
 
@@ -410,7 +410,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
 | Q6 | The other three launch sources and their handover text | Editors | Phase 6 |
-| Q7 | Web Analytics beacon token | Operator | P7-T1 |
+| Q7 | Web Analytics beacon token (Web Analytics > Add a site, hostname = the `workers.dev` address, then the token from the snippet under Manage site) | Operator | P7-T1 |
 
 ---
 
@@ -435,6 +435,10 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-15 | No redirects from the old Google Site; a notice there points to the new address. |
 | 2026-10-19 | TypeScript pinned to 6.0.x: `@astrojs/check` and `typescript-eslint` don't support TypeScript 7 yet. Node floor is 22.22.3 (`eslint-plugin-astro` requirement). |
 | 2026-10-19 | Fonts: WOFF2 files taken from the Fontsource npm packages (`@fontsource/barlow-condensed` 5.3.0, `@fontsource/source-sans-3` 5.3.1) and committed to `public/fonts/` with their OFL licenses; latin and latin-ext subsets, split by `unicode-range` so latin-ext loads only when needed. No font package is a dependency. |
+| 2026-10-19 | Trailing slashes and 404s (Cloudflare docs): `html_handling: "auto-trailing-slash"` serves `<route>/index.html` at `<route>/` and 307-redirects `/route`, `/route/index` and `/route/index.html` there; this matches Astro's `trailingSlash: "always"` and `format: "directory"`. `not_found_handling: "404-page"` serves the nearest `404.html` up the directory tree with a 404 status. No config change. |
+| 2026-10-19 | Branch previews (Cloudflare docs): Workers Builds runs the build, then the preview command (default `npx wrangler preview`, open beta, Wrangler 4.135.0 or later) for non-production branches when Enable Preview Builds is on. Each Preview has a stable URL `<preview-name>-bisdex.<subdomain>.workers.dev` plus a fixed URL per deployment, and Workers Builds posts build status and Preview URLs to pull requests. Previews don't inherit production settings and need a `previews` block in `wrangler.jsonc`; an empty block was added. Preview URLs are public. |
+| 2026-10-19 | Web Analytics (Cloudflare docs): automatic setup only covers sites proxied through Cloudflare, so a `workers.dev` site uses the manual JS snippet from Web Analytics > Manage site, placed before `</body>`. Only the token is site-specific; it goes in `ANALYTICS_TOKEN`. A custom domain later needs its own hostname added in Web Analytics. |
+| 2026-10-19 | Pages CMS questions in 5.3 left open until Pages CMS is turned on; `.pages.yml` marks any suspected gaps in comments. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -443,6 +447,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P0-T2 · Cloudflare answers in section 10; empty `previews` block in wrangler.jsonc; Q7 steps; Pages CMS questions deferred (operator) · after launch, preview copies carry the production canonical URL, so they don't compete in search
 - 2026-10-19 · P3-T2 · BaseLayout (head, noindex, canonical, font preloads), SiteHeader with typeset wordmark and menu, SiteFooter, IntroBand, 404 page; placeholder index uses the layout · no favicon yet (public/favicon.svg not in repo); logo SVG still Q5
 - 2026-10-19 · P3-T1 · tokens.css, fonts.css, global.css, self-hosted fonts in public/fonts; placeholder index imports global.css · BaseLayout (P3-T2) should take over the stylesheet import
 - 2026-10-19 · P0-T1 · Astro 7.4 scaffold, tooling, wrangler.jsonc, config, robots.txt, README · Worker name `bisdex` must match the Worker created in P0-T3; SITE_URL placeholder until Q4
