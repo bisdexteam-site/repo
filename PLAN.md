@@ -36,7 +36,7 @@ You are the operator. Agents do the work; you review it on GitHub.
 ### Content rules (agents must follow)
 
 - **Names:** "BISdex" (never "BisDex" or "BISDEX"). Full name "Business Information Sources Index". The owner is "Business Information Sources Committee" on first mention, then "the committee". Source and vendor names exactly as the editors give them.
-- **Word for word:** text from `docs/handover/` is copied exactly. Only change formatting (Markdown structure, frontmatter). If the text seems wrong, keep it as is and raise it in the handoff note.
+- **Word for word:** text from `docs/handover/` is copied exactly. Only change formatting (Markdown structure, frontmatter). If the text seems wrong, keep it as is and raise it in the handoff note. One exception: **Alternatives** are restructured into one name plus a note per entry (5.2). Keep the editors' words in the note wherever possible, and list every restructured entry, before and after, in the handoff note for the operator to approve.
 - **Reviews are never edited.** Not for typos, not for style. The review body is exactly the approved text.
 - **Never invent** reviews, ratings, grades, citations, quotes, claims, dates, vendor details or descriptor values. Use a placeholder.
 - **Placeholders:** square-bracket text that reads naturally, such as `[IBISWorld one-line summary]`. The placeholder inventory (P5-T2) must find none before launch.
@@ -139,7 +139,7 @@ Rich-text fields are Markdown strings in frontmatter, rendered by one helper in 
 | `lastReviewed` | `YYYY-MM` | yes | Shown at the top and used in the citation |
 | `vendor` | reference → `vendors` | yes | |
 | `bestKnownFor` | Markdown | yes | Coverage summary, including dated coverage claims |
-| `alternatives` | list of `{ name, source?, note? }` | no | `source` is a reference to `sources` when the alternative is in BISdex; otherwise "Not yet in BISdex" is shown |
+| `alternatives` | list of `{ name, source?, note? }` | no | One flat list, in the editors' order. `source` is a reference to `sources` when the alternative is in BISdex; otherwise "Not yet in BISdex" is shown. Links to the old Google Site are dropped, never carried over. |
 | `content` | list of `{ name, description }` | no | Products or modules |
 | `aiFeatures` | Markdown | no | |
 | `useCases.teaching` | list of Markdown | no | APA 7 citations or pointers |
@@ -309,7 +309,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 ### Phase 2: Import
 
 - [ ] **P2-T1 · IBISWorld source and reviews**
-  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`.
+  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`. Alternatives: one list of seven or more entries, restructured as name + note per 2 (content rules); Mintel, BCC Research and Capital IQ become plain names (not yet in BISdex).
   - Remove the placeholder source and review from P1-T1.
   - **Done when:** the build passes, the handover file is in `docs/handover/`, and the handoff note lists any fields left as placeholders.
   - *Depends on P1-T1. Needs Q1.*
@@ -429,6 +429,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-15 | Editors hand over text; agents convert it word for word and keep the original in `docs/handover/`. (operator) |
 | 2026-10-15 | Approved reviews are published by an agent from text the operator pastes in. (operator) |
 | 2026-10-15 | Filters are out of the build; location undecided. (operator) |
+| 2026-10-19 | Alternatives: one flat list per source; each entry restructured as name + note, with the restructuring approved by the operator in the handoff; links to the old Google Site dropped. (operator) |
 | 2026-10-15 | Build on IBISWorld first; other launch sources are added one task each as their text arrives. (operator) |
 | 2026-10-15 | Light testing: the build validates content; no unit tests, no CI. (operator) |
 | 2026-10-15 | No redirects from the old Google Site; a notice there points to the new address. |
