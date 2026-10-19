@@ -307,7 +307,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 ### Phase 2: Import
 
-- [ ] **P2-T1 · IBISWorld source and reviews**
+- [x] **P2-T1 · IBISWorld source and reviews**
   - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`. Alternatives: one list of seven or more entries, restructured as name + note per 2 (content rules); Mintel, BCC Research and Capital IQ become plain names (not yet in BISdex). Last reviewed `2026-05`. No FAQ section. The relevancy ratings in the handover (Researchers Low, Teaching High, Commercial Average) belong on the IBISWorld review, not the source. "Candata" in the Content list is kept as written and flagged for the editors.
   - Remove the placeholder source and review from P1-T1.
   - **Done when:** the build passes, the handover file is in `docs/handover/`, and the handoff note lists any fields left as placeholders.
@@ -439,6 +439,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-19 | Branch previews (Cloudflare docs): Workers Builds runs the build, then the preview command (default `npx wrangler preview`, open beta, Wrangler 4.135.0 or later) for non-production branches when Enable Preview Builds is on. Each Preview has a stable URL `<preview-name>-bisdex.<subdomain>.workers.dev` plus a fixed URL per deployment, and Workers Builds posts build status and Preview URLs to pull requests. Previews don't inherit production settings and need a `previews` block in `wrangler.jsonc`; an empty block was added. Preview URLs are public. |
 | 2026-10-19 | Web Analytics (Cloudflare docs): automatic setup only covers sites proxied through Cloudflare, so a `workers.dev` site uses the manual JS snippet from Web Analytics > Manage site, placed before `</body>`. Only the token is site-specific; it goes in `ANALYTICS_TOKEN`. A custom domain later needs its own hostname added in Web Analytics. |
 | 2026-10-19 | Pages CMS questions in 5.3 left open until Pages CMS is turned on; `.pages.yml` marks any suspected gaps in comments. (operator) |
+| 2026-10-19 | Until Q3 arrives, each descriptor list holds only the IBISWorld review's values as the operator gave them (Library administrator; doctoral research university; 10+ years of experience; evaluator/selector), mapped to role, institution type, experience and relationship. Replaced by the form's exact wording when Q3 arrives. |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -447,6 +448,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P2-T1 · IBISWorld source, review (2022-07) and vendor; placeholders removed · vendor URL is `[Vendor URL]`; alternatives restructuring and descriptor mapping await operator approval; Astro logs a broken reference without failing the build, so page code must check references
 - 2026-10-19 · P1-T1 · content.config.ts (sources, reviews, vendors, pages), src/lib helpers (dates, sort, Markdown via marked, placeholders), placeholder source, review, vendor and About page; invalid date, grade and descriptor each fail the build · left unchecked until Q3 fills the descriptor lists
 - 2026-10-19 · P0-T2 · Cloudflare answers in section 10; empty `previews` block in wrangler.jsonc; Q7 steps; Pages CMS questions deferred (operator) · after launch, preview copies carry the production canonical URL, so they don't compete in search
 - 2026-10-19 · P3-T2 · BaseLayout (head, noindex, canonical, font preloads), SiteHeader with typeset wordmark and menu, SiteFooter, IntroBand, 404 page; placeholder index uses the layout · no favicon yet (public/favicon.svg not in repo); logo SVG still Q5
