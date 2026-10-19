@@ -10,3 +10,21 @@ Best known for: IBISWorld contains industry reports written by in-house analysts
 * Business Source products (includes industry reports from other vendors like MarketLine)
 * ProQuest One Business & ABI/INFORM (includes industry reports from other vendors like Fitch Solutions, FirstResearch) 
 * CFRA Industry Surveys (available in S&P products like NetAdvantage and [Capital IQ](https://sites.google.com/view/bisdex/sources-reviews/capital-iq)) ; AI features: Introduced a "Paragraph Analysis" switch that toggles between list-style and paragraph analysis. IBISWorld is explicit in that they use Generative AI to adapt their human-generated list-style analysis into paragraph form.
+
+<!-- Second paste by the operator on 2026-10-19 (Content, last-reviewed date, relevancy, FAQ). Verbatim. -->
+
+* Industry Reports (global, country-specific, and for the U.S. and Candata state/provincial-specific)
+* [U.S. Specialized Industry Reports](https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports) (Sub-NAICS-level reports) 
+* [U.S. State Industry Reports](https://www.ibisworld.com/united-states/list-of-industries/states-all/)
+* [Specialized Industry Reports](https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports) (for industries outside the scope of the Census)
+* [Spotlight Industry Reports](https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports) (previously on-demand (OD) reports, now a collection of 300+ reports)
+* Premium US Industry Wizard (lets you screen report-level data and export)
+* U.S. Macroeconomic Business Environment Profiles
+* iExpert Summary Reports (short, snapshot versions of the longer industry reports)
+* Industry Financial Ratios (financial ratios for every NAICS industry in the U.S.)
+* Business Environment Profiles (reports covering external drivers affecting industries - e.g. "consumer spending")
+* Segment Benchmarking (breaks down the main U.S. Industry Reports by segments, the segments being based on company size, so you can analyze mom and pop shops separately than big firms). 
+* Company Benchmarking (adds more company-level information to reports and provides brief company profiles)
+* Industry Risk Ratings Reports (quantifying non-financial risks of industries) ; last reviewed date is May 2026; Researchers -  Low
+* Teaching/Students - High
+* Commercial/Industry/Entrepreneurs - Average ; no FAQ as yet for IBISWorld.

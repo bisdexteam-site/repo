@@ -140,7 +140,7 @@ Rich-text fields are Markdown strings in frontmatter, rendered by one helper in 
 | `vendor` | reference → `vendors` | yes | |
 | `bestKnownFor` | Markdown | yes | Coverage summary, including dated coverage claims |
 | `alternatives` | list of `{ name, source?, note? }` | no | One flat list, in the editors' order. `source` is a reference to `sources` when the alternative is in BISdex; otherwise "Not yet in BISdex" is shown. Links to the old Google Site are dropped, never carried over. |
-| `content` | list of `{ name, description }` | no | Products or modules |
+| `content` | list of `{ name, url?, description? }` | no | Products or modules. A linked name in the handover becomes `url`; the parenthetical after a name becomes `description`. |
 | `aiFeatures` | Markdown | no | |
 | `useCases.teaching` | list of Markdown | no | APA 7 citations or pointers |
 | `useCases.commercial` | list of Markdown | no | APA 7 citations |
@@ -309,7 +309,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 ### Phase 2: Import
 
 - [ ] **P2-T1 · IBISWorld source and reviews**
-  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`. Alternatives: one list of seven or more entries, restructured as name + note per 2 (content rules); Mintel, BCC Research and Capital IQ become plain names (not yet in BISdex).
+  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`. Alternatives: one list of seven or more entries, restructured as name + note per 2 (content rules); Mintel, BCC Research and Capital IQ become plain names (not yet in BISdex). Last reviewed `2026-05`. No FAQ section. The relevancy ratings in the handover (Researchers Low, Teaching High, Commercial Average) belong on the IBISWorld review, not the source. "Candata" in the Content list is kept as written and flagged for the editors.
   - Remove the placeholder source and review from P1-T1.
   - **Done when:** the build passes, the handover file is in `docs/handover/`, and the handoff note lists any fields left as placeholders.
   - *Depends on P1-T1. Needs Q1.*
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q1 | IBISWorld handover text, remaining parts: one-line summary, last-reviewed date, Content, Use Cases, FAQ, any carried-over reviews (Description, Alternatives and AI Features are in `docs/handover/ibisworld.md`) | Operator / editors | P2-T1 and every Phase 4 task |
+| Q1 | IBISWorld handover text, remaining parts: one-line summary, Use Cases, and the review (being rewritten by the operator). Everything else is in `docs/handover/ibisworld.md`; there is no FAQ yet. | Operator / editors | P2-T1 and every Phase 4 task |
 | Q2 | About, Editorial Policy and Disclaimer copy (the brief's drafts) | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
@@ -440,6 +440,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · IBISWorld Content, last-reviewed date and relevancy added to handover · summary, Use Cases and review still needed
 - 2026-10-19 · operator request · IBISWorld Description, Alternatives and AI Features saved to docs/handover/ibisworld.md · rest of Q1 still needed
 - 2026-10-19 · operator request · IBISWorld LAA review link and year added to P2-T1 · handover text (Q1) still needed
 - 2026-10-15 · operator request · PLAN.md, CLAUDE.md and docs/DESIGN.md (v0.2) added · inputs Q1 to Q3 needed before Phase 2
