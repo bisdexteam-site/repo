@@ -39,7 +39,7 @@ You are the operator. Agents do the work; you review it on GitHub.
 - **Word for word:** text from `docs/handover/` is copied exactly. Only change formatting (Markdown structure, frontmatter). If the text seems wrong, keep it as is and raise it in the handoff note. One exception: **Alternatives** are restructured into one name plus a note per entry (5.2). Keep the editors' words in the note wherever possible, and list every restructured entry, before and after, in the handoff note for the operator to approve.
 - **Reviews are never edited.** Not for typos, not for style. The review body is exactly the approved text.
 - **Never invent** reviews, ratings, grades, citations, quotes, claims, dates, vendor details or descriptor values. Use a placeholder.
-- **Placeholders:** square-bracket text that reads naturally, such as `[IBISWorld one-line summary]`. The placeholder inventory (P5-T2) must find none before launch.
+- **Placeholders:** square-bracket text that reads naturally, such as `[Vendor URL]`. The placeholder inventory (P5-T2) must find none before launch.
 - **Style:** no em dashes anywhere in site copy. Dates display as "Month Year". Citations follow APA 7. Section headings and button labels exactly as in `docs/DESIGN.md`.
 - **No cost data.** Not in content, comments, commit messages or handover files. If handover text contains prices or license terms, leave them out of the handover file, and say so in the handoff note.
 
@@ -70,7 +70,7 @@ Structure follows the BISdex site brief (operator, 2026-10-15). Page layouts are
 | Route | Page | Sections (in order) | Content source |
 | --- | --- | --- | --- |
 | `/` | Home / index | Intro band (h1); "Sources A to Z" with count; letter-grouped list of source names linking to source pages | `sources` collection |
-| `/sources/<slug>/` | Source page | Page top (breadcrumb, name, summary, last reviewed); "On this page" links; Description; Alternatives; Content; AI Features; Use Cases; Accessibility; Reviews; FAQ; Cite this page | `sources`, `reviews`, `vendors` |
+| `/sources/<slug>/` | Source page | Page top (breadcrumb, name, last reviewed); "On this page" links; Description; Alternatives; Content; AI Features; Use Cases; Accessibility; Reviews; FAQ; Cite this page | `sources`, `reviews`, `vendors` |
 | `/about/` | About | Intro band (h1, lead); Who we are; What each source page covers; What BISdex does not cover; Independence; How to cite BISdex; Contact | `pages/about.md` |
 | `/editorial-policy/` | Editorial Policy and Methodology | Intro band; sidebar "On this page"; Scope; Two kinds of content; Submitting a review; Reviewer guidelines; Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#grades`, with grade table); Independence | `pages/editorial-policy.md` |
 | `/disclaimer/` | Disclaimer | Intro band; Reviews are opinions; What editors verify; Editorial review; Source information; Accessibility grades; No endorsement; Trademarks; Privacy; External links | `pages/disclaimer.md` |
@@ -135,7 +135,6 @@ Rich-text fields are Markdown strings in frontmatter, rendered by one helper in 
 | --- | --- | --- | --- |
 | `name` | string | yes | Display name |
 | `sortName` | string | no | Only if sorting should differ from `name`; leading "The" is ignored automatically |
-| `summary` | string | yes | One-line summary under the h1 |
 | `lastReviewed` | `YYYY-MM` | yes | Shown at the top and used in the citation |
 | `vendor` | reference → `vendors` | yes | |
 | `bestKnownFor` | Markdown | yes | Coverage summary, including dated coverage claims |
@@ -312,7 +311,8 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`. Alternatives: one list of seven or more entries, restructured as name + note per 2 (content rules); Mintel, BCC Research and Capital IQ become plain names (not yet in BISdex). Last reviewed `2026-05`. No FAQ section. The relevancy ratings in the handover (Researchers Low, Teaching High, Commercial Average) belong on the IBISWorld review, not the source. "Candata" in the Content list is kept as written and flagged for the editors.
   - Remove the placeholder source and review from P1-T1.
   - **Done when:** the build passes, the handover file is in `docs/handover/`, and the handoff note lists any fields left as placeholders.
-  - *Depends on P1-T1. Needs Q1.*
+  - Review: date `2022-07`; descriptor and relevancy from the handover. No Use Cases section.
+  - *Depends on P1-T1.*
 
 - [ ] **P2-T2 · About, Editorial Policy and Disclaimer copy**
   - Follow 5.6 with the brief's drafts, into `src/content/pages/`. The grade table goes in the Editorial Policy body as a Markdown table under the "Accessibility grades" heading.
@@ -405,7 +405,6 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q1 | IBISWorld handover text, remaining parts: one-line summary; Use Cases (or confirmation there are none); the review's date. Descriptor values are given but must be matched to the form's exact wording (Q3). Everything else, including the review text, is in `docs/handover/ibisworld.md`; there is no FAQ yet. | Operator / editors | P2-T1 and every Phase 4 task |
 | Q2 | About, Editorial Policy and Disclaimer copy (the brief's drafts) | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
@@ -429,6 +428,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-15 | Editors hand over text; agents convert it word for word and keep the original in `docs/handover/`. (operator) |
 | 2026-10-15 | Approved reviews are published by an agent from text the operator pastes in. (operator) |
 | 2026-10-15 | Filters are out of the build; location undecided. (operator) |
+| 2026-10-19 | No one-line summary on source pages; the Description covers it. Replaces DESIGN.md 0.2 section 5.1 lead line. (operator) |
 | 2026-10-19 | Alternatives: one flat list per source; each entry restructured as name + note, with the restructuring approved by the operator in the handoff; links to the old Google Site dropped. (operator) |
 | 2026-10-15 | Build on IBISWorld first; other launch sources are added one task each as their text arrives. (operator) |
 | 2026-10-15 | Light testing: the build validates content; no unit tests, no CI. (operator) |
@@ -440,6 +440,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · IBISWorld handover complete (review date, no Use Cases, no summary); summary field dropped site-wide · Q1 closed
 - 2026-10-19 · operator request · IBISWorld review descriptor and disclosures (none) added to handover · review date still needed
 - 2026-10-19 · operator request · IBISWorld review text added to handover · review date and descriptor values still needed
 - 2026-10-19 · operator request · IBISWorld Content, last-reviewed date and relevancy added to handover · summary, Use Cases and review still needed

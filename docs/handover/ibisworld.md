@@ -36,3 +36,7 @@ It is a surprisingly well-liked and non-fussy resource! It is relatively easy to
 <!-- Fourth note from the operator on 2026-10-19: IBISWorld review descriptor and disclosures. Values as given; match to the exact Google Form wording when the form's options are recorded. -->
 
 Library administrator, evaluator/selector, doctoral research university, 10+ years of experience, no AI use, no work for vendor
+
+<!-- Fifth note from the operator on 2026-10-19. -->
+
+Use cases: none yet. Review date: July 31, 2022. No one-line summary (the description covers it).

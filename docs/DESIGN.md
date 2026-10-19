@@ -1,11 +1,13 @@
 # BISdex Design Specification
 
-Version 0.2, October 2026
+Version 0.3, October 2026
 Source documents: *BISdex site brief* and the *BISdex Site Mockups* design canvas
 
 This spec describes how the new BISdex site should look and behave. It follows the brief and the reviewed mockups and guides the Astro build. Section 12 records how the open decisions from version 0.1 were settled.
 
 **Changes from 0.1:** relevancy ratings move from a source-level section into each review (5.4, 5.6, 5.7); the summary strip no longer includes relevancy (5.1); the open decisions are settled (12).
+
+**Changes from 0.2:** no one-line summary under the source page title; the Description section covers it (5.1, 5.4).
 
 ---
 
@@ -189,7 +191,6 @@ Model page: IBISWorld.
 
 - Breadcrumb: "Sources / [Source name]" (`nav aria-label="Breadcrumb"`).
 - h1: source name.
-- Lead line: the one-line summary (based on "Best known for", chosen by editors).
 - Caption: "Source information last reviewed [Month Year]".
 - Summary strip: off. If turned on later, it shows small bordered tiles for the WCAG grade and review count only.
 
@@ -209,7 +210,7 @@ Every section uses the same pattern:
 
 | # | Section | `id` | Content and display |
 |---|---|---|---|
-| 1 | Source | (page top) | Name, one-line summary, last-reviewed date |
+| 1 | Source | (page top) | Name, last-reviewed date |
 | 2 | Description | `description` | Definition list: **Vendor** (linked to vendor URL), **Best known for** (coverage summary, including coverage claims) |
 | 3 | Alternatives | `alternatives` | List of similar or budget-friendly sources. Names in BISdex link to their source page; others show "Not yet in BISdex" in secondary text. An optional short note after each name. |
 | 4 | Content | `content` | Definition list: product or module name (bold, primary) with a short description |
