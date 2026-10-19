@@ -1,0 +1,57 @@
+---
+/**
+ * One section of a source page: the h2 in a narrow left column and the
+ * content beside it. The columns stack when the page is narrow.
+ */
+
+interface Props {
+  id: string;
+  title: string;
+}
+
+const { id, title } = Astro.props;
+const headingId = `${id}-heading`;
+---
+
+<section class="source-section" id={id} aria-labelledby={headingId}>
+  <div class="source-section__heading">
+    <h2 id={headingId}>{title}</h2>
+    <slot name="heading-note" />
+  </div>
+  <div class="source-section__body">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .source-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4) var(--space-7);
+    padding-block: var(--space-6);
+    border-bottom: var(--rule-hair);
+    scroll-margin-top: var(--space-4);
+  }
+
+  .source-section:last-child {
+    border-bottom: 0;
+  }
+
+  .source-section__heading {
+    flex: 1 1 200px;
+    max-width: 240px;
+  }
+
+  .source-section__body {
+    flex: 999 1 440px;
+    min-width: 0;
+    max-width: var(--width-reading-wide);
+  }
+
+  @media (max-width: 820px) {
+    .source-section__heading {
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+</style>

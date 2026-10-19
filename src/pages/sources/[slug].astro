@@ -1,0 +1,372 @@
+---
+/**
+ * Source page: page top, "On this page" links, then each section the source
+ * has content for, in a fixed order.
+ */
+import SourceSection from "@/components/SourceSection.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSiteContent, type Source } from "@/lib/content";
+import { formatMonth } from "@/lib/dates";
+import { renderInline, renderMarkdown } from "@/lib/markdown";
+import { isPlaceholder } from "@/lib/placeholders";
+
+export async function getStaticPaths() {
+  const { sources } = await getSiteContent();
+  return sources.map((source) => ({
+    params: { slug: source.id },
+    props: { source },
+  }));
+}
+
+interface Props {
+  source: Source;
+}
+
+const { source } = Astro.props;
+const data = source.data;
+const { vendors, sources } = await getSiteContent();
+const vendor = vendors.get(data.vendor.id)!;
+const sourceNames = new Map(
+  sources.map((entry) => [entry.id, entry.data.name]),
+);
+
+const teaching = data.useCases?.teaching ?? [];
+const commercial = data.useCases?.commercial ?? [];
+
+const sections = [
+  { id: "description", title: "Description", show: true },
+  {
+    id: "alternatives",
+    title: "Alternatives",
+    show: (data.alternatives?.length ?? 0) > 0,
+  },
+  { id: "content", title: "Content", show: (data.content?.length ?? 0) > 0 },
+  { id: "ai", title: "AI Features", show: Boolean(data.aiFeatures) },
+  {
+    id: "usecases",
+    title: "Use Cases",
+    show: teaching.length + commercial.length > 0,
+  },
+  { id: "faq", title: "FAQ", show: (data.faq?.length ?? 0) > 0 },
+].filter((section) => section.show);
+
+const has = (id: string) => sections.some((section) => section.id === id);
+const titleOf = (id: string) =>
+  sections.find((section) => section.id === id)!.title;
+---
+
+<BaseLayout
+  title={data.name}
+  description={`${data.name}: description, content, accessibility grade and librarian reviews on BISdex.`}
+>
+  <div class="source-top">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <a href="/">Sources</a>
+          </li>
+          <li>
+            <a href={`/sources/${source.id}/`} aria-current="page">
+              {data.name}
+            </a>
+          </li>
+        </ol>
+      </nav>
+      <h1 class="source-top__title">{data.name}</h1>
+      <p class="source-top__caption">
+        Source information last reviewed{" "}
+        <time datetime={data.lastReviewed}>
+          {formatMonth(data.lastReviewed)}
+        </time>
+      </p>
+    </div>
+  </div>
+
+  <nav class="container" aria-labelledby="on-this-page-label">
+    <div class="on-this-page">
+      <p class="on-this-page__label" id="on-this-page-label">
+        On this page
+      </p>
+      <ul class="on-this-page__list">
+        {sections.map((section) => (
+          <li>
+            <a href={`#${section.id}`}>{section.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container source-sections">
+    <SourceSection id="description" title="Description">
+      <dl class="label-list">
+        <div>
+          <dt>Vendor</dt>
+          <dd>
+            {isPlaceholder(vendor.data.url) ? (
+              vendor.data.name
+            ) : (
+              <a href={vendor.data.url}>{vendor.data.name}</a>
+            )}
+          </dd>
+        </div>
+        <div>
+          <dt>Best known for</dt>
+          <dd class="prose" set:html={renderMarkdown(data.bestKnownFor)} />
+        </div>
+      </dl>
+    </SourceSection>
+
+    {has("alternatives") && (
+      <SourceSection id="alternatives" title={titleOf("alternatives")}>
+        <ul class="alternatives">
+          {data.alternatives!.map((alternative) => (
+            <li>
+              <span class="alternatives__name">
+                {alternative.source ? (
+                  <a href={`/sources/${alternative.source.id}/`}>
+                    {sourceNames.get(alternative.source.id)}
+                  </a>
+                ) : (
+                  alternative.name
+                )}
+              </span>
+              {!alternative.source && (
+                <span class="alternatives__status">Not yet in BISdex</span>
+              )}
+              {alternative.note && (
+                <p class="alternatives__note">{alternative.note}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      </SourceSection>
+    )}
+
+    {has("content") && (
+      <SourceSection id="content" title={titleOf("content")}>
+        <dl class="content-list">
+          {data.content!.map((item) => (
+            <div>
+              <dt>
+                {item.url && !isPlaceholder(item.url) ? (
+                  <a href={item.url}>{item.name}</a>
+                ) : (
+                  item.name
+                )}
+              </dt>
+              {item.description && <dd>{item.description}</dd>}
+            </div>
+          ))}
+        </dl>
+      </SourceSection>
+    )}
+
+    {has("ai") && (
+      <SourceSection id="ai" title={titleOf("ai")}>
+        <div class="prose" set:html={renderMarkdown(data.aiFeatures!)} />
+      </SourceSection>
+    )}
+
+    {has("usecases") && (
+      <SourceSection id="usecases" title={titleOf("usecases")}>
+        <div class="use-cases">
+          {teaching.length > 0 && (
+            <div>
+              <h3>Teaching and Instruction</h3>
+              <ul>
+                {teaching.map((item) => (
+                  <li set:html={renderInline(item)} />
+                ))}
+              </ul>
+            </div>
+          )}
+          {commercial.length > 0 && (
+            <div>
+              <h3>Commercial and Industry</h3>
+              <ul>
+                {commercial.map((item) => (
+                  <li set:html={renderInline(item)} />
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </SourceSection>
+    )}
+
+    {has("faq") && (
+      <SourceSection id="faq" title={titleOf("faq")}>
+        <div class="faq">
+          {data.faq!.map((item, index) => (
+            <details open={index === 0}>
+              <summary>{item.question}</summary>
+              <div class="prose" set:html={renderMarkdown(item.answer)} />
+            </details>
+          ))}
+        </div>
+      </SourceSection>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .source-top {
+    border-bottom: var(--rule-hair);
+    background: var(--color-surface);
+    padding-block: var(--space-6) var(--space-7);
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    font-size: var(--text-small);
+  }
+
+  .breadcrumb li + li::before {
+    content: "/";
+    padding-inline: var(--space-2);
+    color: var(--color-text-secondary);
+  }
+
+  .breadcrumb [aria-current="page"] {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .source-top__title {
+    margin-top: var(--space-5);
+    font-size: var(--text-title-source);
+    line-height: var(--leading-tight);
+  }
+
+  .source-top__caption {
+    margin-top: var(--space-4);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  .on-this-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-5);
+    padding-block: var(--space-4);
+    border-bottom: var(--rule-hair);
+  }
+
+  .on-this-page__label {
+    color: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    font-size: var(--text-eyebrow);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .on-this-page__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-5);
+    padding: 0;
+    list-style: none;
+  }
+
+  .on-this-page__list a {
+    display: inline-block;
+    padding-block: var(--space-2);
+  }
+
+  .source-sections {
+    padding-bottom: var(--space-7);
+  }
+
+  .label-list > div + div {
+    margin-top: var(--space-4);
+  }
+
+  .label-list dt {
+    font-weight: 700;
+  }
+
+  .prose :global(p + p) {
+    margin-top: var(--space-4);
+  }
+
+  .alternatives {
+    padding: 0;
+    list-style: none;
+  }
+
+  .alternatives li {
+    padding-block: var(--space-3);
+    border-bottom: var(--rule-hair);
+  }
+
+  .alternatives li:first-child {
+    padding-top: 0;
+  }
+
+  .alternatives li:last-child {
+    border-bottom: 0;
+  }
+
+  .alternatives__name {
+    font-weight: 600;
+  }
+
+  .alternatives__status {
+    margin-left: var(--space-2);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  .alternatives__note {
+    color: var(--color-text);
+  }
+
+  .content-list > div {
+    padding-block: var(--space-3);
+    border-bottom: var(--rule-hair);
+  }
+
+  .content-list > div:first-child {
+    padding-top: 0;
+  }
+
+  .content-list > div:last-child {
+    border-bottom: 0;
+  }
+
+  .content-list dt {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--space-5) var(--space-7);
+  }
+
+  .use-cases ul {
+    margin-top: var(--space-2);
+  }
+
+  .faq details {
+    border-bottom: var(--rule-hair);
+  }
+
+  .faq summary {
+    padding-block: var(--space-3);
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .faq details > div {
+    padding-bottom: var(--space-4);
+  }
+</style>

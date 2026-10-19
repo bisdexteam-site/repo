@@ -338,7 +338,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - **Done when:** sources are grouped by letter, sorted ignoring leading "The", with the count, and the layout reflows to one column at 320px.
   - *Depends on P2-T1, P3-T2.*
 
-- [ ] **P4-T2 · Source page: top and editorial sections**
+- [x] **P4-T2 · Source page: top and editorial sections**
   - Route `/sources/[slug]/`; page top; "On this page" links; `SourceSection`; Description, Alternatives, Content, AI Features, Use Cases, FAQ. Empty optional sections are omitted, along with their "On this page" link.
   - **Done when:** the IBISWorld page renders every section it has data for, and the headings outline is valid.
   - *Depends on P4-T1.*
@@ -448,6 +448,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P4-T2 · /sources/[slug]/ with page top, "On this page", SourceSection, Description, Alternatives, Content, AI Features, Use Cases and FAQ; empty sections and their links omitted · vendor shows unlinked while its URL is a placeholder
 - 2026-10-19 · P4-T1 · home index from the sources collection, letter-grouped with count; `INDEX_BY_LETTER` in config switches to a plain list; src/lib/content.ts loads content once and fails the build on broken references · none
 - 2026-10-19 · P2-T1 · IBISWorld source, review (2022-07) and vendor; placeholders removed · vendor URL is `[Vendor URL]`; alternatives restructuring and descriptor mapping await operator approval; Astro logs a broken reference without failing the build, so page code must check references
 - 2026-10-19 · P1-T1 · content.config.ts (sources, reviews, vendors, pages), src/lib helpers (dates, sort, Markdown via marked, placeholders), placeholder source, review, vendor and About page; invalid date, grade and descriptor each fail the build · left unchecked until Q3 fills the descriptor lists
