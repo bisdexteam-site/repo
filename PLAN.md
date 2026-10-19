@@ -71,7 +71,7 @@ Structure follows the BISdex site brief (operator, 2026-10-15). Page layouts are
 | --- | --- | --- | --- |
 | `/` | Home / index | Intro band (h1); "Sources A to Z" with count; letter-grouped list of source names linking to source pages | `sources` collection |
 | `/sources/<slug>/` | Source page | Page top (breadcrumb, name, last reviewed); "On this page" links; Description; Alternatives; Content; AI Features; Use Cases; Accessibility; Reviews; FAQ; Cite this page | `sources`, `reviews`, `vendors` |
-| `/about/` | About | Intro band (h1, lead); Who we are; What each source page covers; What BISdex does not cover; Independence; How to cite BISdex; Contact | `pages/about.md` |
+| `/about/` | About | Intro band (h1, lead); What we cover; Our history | `pages/about.md` |
 | `/editorial-policy/` | Editorial Policy and Methodology | Intro band; sidebar "On this page"; Scope; Two kinds of content; Submitting a review; Reviewer guidelines; Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#grades`, with grade table); Independence | `pages/editorial-policy.md` |
 | `/disclaimer/` | Disclaimer | Intro band; Reviews are opinions; What editors verify; Editorial review; Source information; Accessibility grades; No endorsement; Trademarks; Privacy; External links | `pages/disclaimer.md` |
 | `404` | Page not found | Intro band ("Page not found"); one line with a link to the index | code |
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q2 | About, Editorial Policy and Disclaimer copy (the brief's drafts) | Operator | P2-T2, P4-T5 |
+| Q2 | Editorial Policy and Disclaimer copy (the brief's drafts); About copy received 2026-10-19 | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
@@ -441,6 +441,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-19 | Pages CMS questions in 5.3 left open until Pages CMS is turned on; `.pages.yml` marks any suspected gaps in comments. (operator) |
 | 2026-10-19 | Until Q3 arrives, each descriptor list holds only the IBISWorld review's values as the operator gave them (Library administrator; doctoral research university; 10+ years of experience; evaluator/selector), mapped to role, institution type, experience and relationship. Replaced by the form's exact wording when Q3 arrives. |
 | 2026-10-19 | FactSet review: the handover's Researchers rating "Low to Average" is published as Average; the source's last-reviewed date and the review date are both July 2024; no accessibility grade yet; descriptor role "Business librarian", relationship "administrator" (added to the interim descriptor lists). (operator) |
+| 2026-10-19 | About page copy comes from the editors' handover ("About BISdex"): lead paragraph, What we cover, Our history. It replaces the About sections listed in DESIGN.md section 6; no Who we are, Independence, How to cite or Contact sections. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -449,6 +450,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · About copy (handover saved) and /about/ page from pages/about.md; About part of P2-T2 and P4-T5 done · Editorial Policy and Disclaimer copy still needed (Q2); P2-T2 and P4-T5 stay unchecked until they are done
 - 2026-10-19 · P6-T1 · FactSet source, review (2024-07) and vendor; handover saved · vendor URL is `[Vendor URL]`; old Google Site links dropped from Best known for and Alternatives; one date given, used for both last-reviewed and review dates
 - 2026-10-19 · P4-T3 · GradeTile (graded and not yet reviewed), Reviews section with call-to-action panel, ReviewItem with RelevancyMeter, newest first with count · "How grades are assigned" links to /editorial-policy/#grades, which 404s until P4-T5
 - 2026-10-19 · P4-T2 · /sources/[slug]/ with page top, "On this page", SourceSection, Description, Alternatives, Content, AI Features, Use Cases and FAQ; empty sections and their links omitted · vendor shows unlinked while its URL is a placeholder

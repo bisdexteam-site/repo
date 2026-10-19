@@ -1,0 +1,49 @@
+---
+import { getEntry, render } from "astro:content";
+import IntroBand from "@/components/IntroBand.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const page = await getEntry("pages", "about");
+if (!page) throw new Error("Missing src/content/pages/about.md");
+
+const { Content } = await render(page);
+---
+
+<BaseLayout
+  title="About"
+  description="BISdex reviews information sources for business information professionals."
+>
+  <IntroBand title={page.data.title} lead={page.data.lead} />
+  <div class="container">
+    <article class="text-page">
+      <Content />
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .text-page {
+    max-width: var(--width-reading);
+    padding-block: var(--space-7) var(--space-8);
+  }
+
+  .text-page :global(h2) {
+    margin-top: var(--space-7);
+  }
+
+  .text-page :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .text-page :global(h2 + *) {
+    margin-top: var(--space-4);
+  }
+
+  .text-page :global(ul) {
+    padding-left: var(--space-5);
+  }
+
+  .text-page :global(li + li) {
+    margin-top: var(--space-2);
+  }
+</style>
