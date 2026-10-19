@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q1 | IBISWorld handover text, remaining parts: one-line summary; Use Cases (or confirmation there are none); the review's date and descriptor values. Everything else, including the review text, is in `docs/handover/ibisworld.md`; there is no FAQ yet. | Operator / editors | P2-T1 and every Phase 4 task |
+| Q1 | IBISWorld handover text, remaining parts: one-line summary; Use Cases (or confirmation there are none); the review's date. Descriptor values are given but must be matched to the form's exact wording (Q3). Everything else, including the review text, is in `docs/handover/ibisworld.md`; there is no FAQ yet. | Operator / editors | P2-T1 and every Phase 4 task |
 | Q2 | About, Editorial Policy and Disclaimer copy (the brief's drafts) | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
@@ -440,6 +440,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · IBISWorld review descriptor and disclosures (none) added to handover · review date still needed
 - 2026-10-19 · operator request · IBISWorld review text added to handover · review date and descriptor values still needed
 - 2026-10-19 · operator request · IBISWorld Content, last-reviewed date and relevancy added to handover · summary, Use Cases and review still needed
 - 2026-10-19 · operator request · IBISWorld Description, Alternatives and AI Features saved to docs/handover/ibisworld.md · rest of Q1 still needed
