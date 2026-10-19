@@ -1,0 +1,55 @@
+---
+/**
+ * Full-width band under the header holding the page h1 and an optional
+ * lead paragraph.
+ */
+
+interface Props {
+  title: string;
+  lead?: string;
+  /** "intro" is the home page intro line; "page" is a text page title. */
+  size?: "page" | "intro";
+}
+
+const { title, lead, size = "page" } = Astro.props;
+---
+
+<div class="intro-band">
+  <div class="container">
+    <div class="intro-band__content">
+      <h1 class:list={["intro-band__title", `intro-band__title--${size}`]}>
+        {title}
+      </h1>
+      {lead && <p class="intro-band__lead">{lead}</p>}
+    </div>
+  </div>
+</div>
+
+<style>
+  .intro-band {
+    border-bottom: var(--rule-hair);
+    background: var(--color-surface);
+    padding-block: var(--space-8) var(--space-7);
+  }
+
+  .intro-band__content {
+    max-width: var(--width-reading);
+  }
+
+  .intro-band__title--page {
+    font-size: var(--text-title-page);
+    line-height: var(--leading-title);
+  }
+
+  .intro-band__title--intro {
+    font-size: var(--text-intro);
+    font-weight: 600;
+    line-height: var(--leading-intro);
+  }
+
+  .intro-band__lead {
+    margin-top: var(--space-5);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+  }
+</style>

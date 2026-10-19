@@ -1,0 +1,42 @@
+---
+/**
+ * Site footer: committee credit with the contact address, and the
+ * disclaimer line.
+ */
+import { CONTACT_EMAIL } from "@/config";
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>
+      BISdex is maintained by the Business Information Sources Committee, BRASS,
+      RUSA, American Library Association ·{" "}
+      <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+    </p>
+    <p>
+      Reviews reflect the opinions of individual reviewers, not BISdex or ALA.{" "}
+      <a href="/disclaimer/">Read the full disclaimer.</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: var(--rule-frame);
+    background: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: var(--leading-small);
+  }
+
+  .site-footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-block: var(--space-6);
+  }
+
+  .site-footer p + p {
+    margin-top: 0;
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+/**
+ * Shell for every page: document head, brand bar, skip link, header,
+ * main landmark and footer.
+ */
+import SiteFooter from "@/components/SiteFooter.astro";
+import SiteHeader from "@/components/SiteHeader.astro";
+import { SITE_URL, allowIndexing } from "@/config";
+import "@/styles/global.css";
+
+interface Props {
+  /** Page name shown before " · BISdex" in the title. Omit on the home page. */
+  title?: string;
+  /** Meta description for this page. */
+  description: string;
+  /** Set to false on pages that have no canonical address, such as the 404. */
+  canonical?: boolean;
+}
+
+const { title, description, canonical = true } = Astro.props;
+
+const pageTitle = title ? `${title} · BISdex` : "BISdex";
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonicalUrl} />}
+    {!allowIndexing && <meta name="robots" content="noindex" />}
+    <link
+      rel="preload"
+      href="/fonts/barlow-condensed-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/source-sans-3-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to main content
+    </a>
+    <SiteHeader currentPath={Astro.url.pathname} />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

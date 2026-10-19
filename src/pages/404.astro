@@ -1,0 +1,28 @@
+---
+import IntroBand from "@/components/IntroBand.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page not found"
+  description="This page does not exist on BISdex."
+  canonical={false}
+>
+  <IntroBand title="Page not found" />
+  <div class="container not-found">
+    <p>
+      There is no page at this address. Browse the{" "}
+      <a href="/">index of sources</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding-block: var(--space-7);
+  }
+
+  .not-found p {
+    max-width: var(--width-reading);
+  }
+</style>

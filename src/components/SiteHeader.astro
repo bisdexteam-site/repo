@@ -1,0 +1,129 @@
+---
+/**
+ * Site header: typeset wordmark linked to the home page, and the main menu.
+ * The menu item for the current page carries aria-current="page".
+ */
+
+interface Props {
+  /** Path of the current page, with a trailing slash. */
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const menu = [
+  { label: "Sources", href: "/" },
+  { label: "About", href: "/about/" },
+  { label: "Editorial Policy", href: "/editorial-policy/" },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="wordmark" href="/" aria-label="BISdex home">
+      <span class="wordmark__name" aria-hidden="true">
+        BIS<span class="wordmark__dex">dex</span>
+      </span>
+      <span class="wordmark__subtitle" aria-hidden="true">
+        Business Information Sources Index
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        {menu.map((item) => (
+          <li>
+            <a
+              class="site-nav__link"
+              href={item.href}
+              aria-current={currentPath === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-top: var(--brand-bar);
+    border-bottom: var(--rule-frame);
+    background: var(--color-background);
+  }
+
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4) var(--space-7);
+    padding-block: var(--space-5);
+  }
+
+  .wordmark {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    font-family: var(--font-heading);
+    text-decoration: none;
+  }
+
+  .wordmark__name {
+    color: var(--color-primary);
+    font-size: var(--text-wordmark);
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    letter-spacing: 0.5px;
+  }
+
+  /* Part of the logotype; carries no meaning on its own. */
+  .wordmark__dex {
+    color: var(--color-logo-gray);
+  }
+
+  .wordmark__subtitle {
+    color: var(--color-text-secondary);
+    font-size: var(--text-wordmark-subtitle);
+    font-weight: 500;
+    line-height: var(--leading-tight);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .wordmark:hover .wordmark__name {
+    color: var(--color-primary-hover);
+  }
+
+  .site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--space-5);
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-nav__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    border-bottom: 3px solid transparent;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-size: var(--text-nav);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .site-nav__link:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+  }
+
+  .site-nav__link[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+  }
+</style>

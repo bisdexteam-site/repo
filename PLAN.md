@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. P0-T1 and P3-T1 done: scaffold builds with tokens, fonts and base styles. Next: P0-T2 or P3-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. P0-T1, P3-T1 and P3-T2 done: scaffold builds with tokens, fonts, base styles and the shared page layout (header, footer, intro band, 404). Next: P0-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -326,7 +326,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - **Done when:** no raw hex values outside `tokens.css`, and no request to any font host in the built HTML.
   - *Depends on P0-T1.*
 
-- [ ] **P3-T2 · Base layout, header, footer, 404**
+- [x] **P3-T2 · Base layout, header, footer, 404**
   - `BaseLayout` (head per 5.8, brand bar, skip link, header with logo and menu with `aria-current`, `<main id="main">`, footer), `IntroBand`, the 404 page.
   - Logo: typeset wordmark as in the mockups until the SVG arrives (Q5).
   - **Done when:** the placeholder index uses the layout; keyboard tab order is skip link, logo, menu; noindex meta is present while `allowIndexing` is false.
@@ -443,6 +443,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P3-T2 · BaseLayout (head, noindex, canonical, font preloads), SiteHeader with typeset wordmark and menu, SiteFooter, IntroBand, 404 page; placeholder index uses the layout · no favicon yet (public/favicon.svg not in repo); logo SVG still Q5
 - 2026-10-19 · P3-T1 · tokens.css, fonts.css, global.css, self-hosted fonts in public/fonts; placeholder index imports global.css · BaseLayout (P3-T2) should take over the stylesheet import
 - 2026-10-19 · P0-T1 · Astro 7.4 scaffold, tooling, wrangler.jsonc, config, robots.txt, README · Worker name `bisdex` must match the Worker created in P0-T3; SITE_URL placeholder until Q4
 - 2026-10-19 · operator request · IBISWorld handover complete (review date, no Use Cases, no summary); summary field dropped site-wide · Q1 closed

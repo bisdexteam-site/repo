@@ -143,6 +143,27 @@ a:hover {
   outline-offset: var(--focus-offset);
 }
 
+/* Page frame: the footer sits at the bottom of short pages */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Content container shared by the header, footer and page sections */
+
+.container {
+  width: 100%;
+  max-width: var(--width-container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
 /* Visually hidden text, still read by screen readers */
 
 .visually-hidden {
