@@ -334,7 +334,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 ### Phase 4: Pages
 
-- [ ] **P4-T1 · Home index** (DESIGN.md section 4)
+- [x] **P4-T1 · Home index** (DESIGN.md section 4)
   - **Done when:** sources are grouped by letter, sorted ignoring leading "The", with the count, and the layout reflows to one column at 320px.
   - *Depends on P2-T1, P3-T2.*
 
@@ -448,6 +448,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P4-T1 · home index from the sources collection, letter-grouped with count; `INDEX_BY_LETTER` in config switches to a plain list; src/lib/content.ts loads content once and fails the build on broken references · none
 - 2026-10-19 · P2-T1 · IBISWorld source, review (2022-07) and vendor; placeholders removed · vendor URL is `[Vendor URL]`; alternatives restructuring and descriptor mapping await operator approval; Astro logs a broken reference without failing the build, so page code must check references
 - 2026-10-19 · P1-T1 · content.config.ts (sources, reviews, vendors, pages), src/lib helpers (dates, sort, Markdown via marked, placeholders), placeholder source, review, vendor and About page; invalid date, grade and descriptor each fail the build · left unchecked until Q3 fills the descriptor lists
 - 2026-10-19 · P0-T2 · Cloudflare answers in section 10; empty `previews` block in wrangler.jsonc; Q7 steps; Pages CMS questions deferred (operator) · after launch, preview copies carry the production canonical URL, so they don't compete in search

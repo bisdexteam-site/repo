@@ -1,6 +1,25 @@
 ---
 import IntroBand from "@/components/IntroBand.astro";
+import { INDEX_BY_LETTER } from "@/config";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getSiteContent, type Source } from "@/lib/content";
+import { indexLetter } from "@/lib/sort";
+
+const { sources } = await getSiteContent();
+
+const groups: { letter: string; sources: Source[] }[] = [];
+if (INDEX_BY_LETTER) {
+  for (const source of sources) {
+    const letter = indexLetter(source.data);
+    const last = groups.at(-1);
+    if (last?.letter === letter) last.sources.push(source);
+    else groups.push({ letter, sources: [source] });
+  }
+} else {
+  groups.push({ letter: "", sources });
+}
+
+const count = `${sources.length} ${sources.length === 1 ? "source" : "sources"}`;
 ---
 
 <BaseLayout description="Quick insights into leading and emerging business information sources, by and for librarians.">
@@ -8,4 +27,94 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     size="intro"
     title="Quick insights into leading & emerging business information sources; by and for librarians"
   />
+  <section class="container source-index" aria-labelledby="index-heading">
+    <div class="source-index__heading">
+      <h2 id="index-heading">Sources A to Z</h2>
+      <p class="source-index__count">{count}</p>
+    </div>
+    <div
+      class:list={[
+        "source-index__groups",
+        { "source-index__groups--plain": !INDEX_BY_LETTER },
+      ]}
+    >
+      {groups.map((group) => (
+        <div class="source-index__group">
+          {group.letter && (
+            <span class="source-index__letter" aria-hidden="true">
+              {group.letter}
+            </span>
+          )}
+          <ul class="source-index__list">
+            {group.sources.map((source) => (
+              <li>
+                <a href={`/sources/${source.id}/`}>{source.data.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .source-index {
+    padding-block: var(--space-7) var(--space-8);
+  }
+
+  .source-index__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+    padding-bottom: var(--space-3);
+    border-bottom: var(--rule-strong);
+  }
+
+  .source-index__count {
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+  }
+
+  .source-index__groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    gap: var(--space-7) var(--space-7);
+    margin-top: var(--space-6);
+  }
+
+  .source-index__groups--plain {
+    display: block;
+    columns: 240px;
+    column-gap: var(--space-7);
+  }
+
+  .source-index__letter {
+    display: block;
+    color: var(--color-logo-gray);
+    font-family: var(--font-heading);
+    font-size: 2.125rem;
+    font-weight: 700;
+    line-height: var(--leading-tight);
+  }
+
+  .source-index__list {
+    margin-top: var(--space-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .source-index__list li {
+    border-bottom: var(--rule-hair);
+    break-inside: avoid;
+  }
+
+  .source-index__list a {
+    display: block;
+    padding-block: var(--space-3);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+</style>

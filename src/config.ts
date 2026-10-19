@@ -9,6 +9,12 @@
  */
 export const SITE_URL = "https://site-address-placeholder.invalid";
 
+/**
+ * Home index layout: true groups sources under letter headings; false shows
+ * one plain multi-column list.
+ */
+export const INDEX_BY_LETTER = true;
+
 /** Google Form where reviewers submit reviews. */
 export const REVIEW_FORM_URL = "https://forms.gle/JkQis9eyVQNvtebw9";
 
