@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. P0-T1, P0-T2, P3-T1 and P3-T2 done: scaffold builds with tokens, fonts, base styles and the shared page layout (header, footer, intro band, 404); Cloudflare behavior checked against the docs. Next: finish P0-T3 (operator: Worker rename, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -343,7 +343,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - **Done when:** the IBISWorld page renders every section it has data for, and the headings outline is valid.
   - *Depends on P4-T1.*
 
-- [ ] **P4-T3 · Source page: accessibility and reviews**
+- [x] **P4-T3 · Source page: accessibility and reviews**
   - `GradeTile` (both states), Reviews section with the call-to-action panel and `ReviewItem` (descriptor, badge, date, relevancy rows with `RelevancyMeter`, text, disclosures), newest first, with the count.
   - Relevancy is shown inside each review only, in the fixed audience order, and audiences a reviewer didn't rate are left out.
   - **Done when:** both grade states are checked (temporarily remove the grade, then restore it), and the review descriptor shows only schema values.
@@ -448,6 +448,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P4-T3 · GradeTile (graded and not yet reviewed), Reviews section with call-to-action panel, ReviewItem with RelevancyMeter, newest first with count · "How grades are assigned" links to /editorial-policy/#grades, which 404s until P4-T5
 - 2026-10-19 · P4-T2 · /sources/[slug]/ with page top, "On this page", SourceSection, Description, Alternatives, Content, AI Features, Use Cases and FAQ; empty sections and their links omitted · vendor shows unlinked while its URL is a placeholder
 - 2026-10-19 · P4-T1 · home index from the sources collection, letter-grouped with count; `INDEX_BY_LETTER` in config switches to a plain list; src/lib/content.ts loads content once and fails the build on broken references · none
 - 2026-10-19 · P2-T1 · IBISWorld source, review (2022-07) and vendor; placeholders removed · vendor URL is `[Vendor URL]`; alternatives restructuring and descriptor mapping await operator approval; Astro logs a broken reference without failing the build, so page code must check references

@@ -1,0 +1,110 @@
+---
+/**
+ * A reviewer's relevancy ratings: one row per audience they rated, each with
+ * a three-segment meter and the rating in words. The words carry the
+ * meaning; the meter is hidden from assistive technology.
+ */
+
+type Level = "Low" | "Average" | "High";
+
+interface Props {
+  researchers?: Level;
+  teaching?: Level;
+  commercial?: Level;
+  headingLevel?: "h3" | "h4";
+}
+
+const { headingLevel = "h4", ...ratings } = Astro.props;
+
+const audiences = [
+  { key: "researchers", label: "Researchers" },
+  { key: "teaching", label: "Teaching / Students" },
+  { key: "commercial", label: "Commercial / Industry / Entrepreneurs" },
+] as const;
+
+const filled: Record<Level, number> = { Low: 1, Average: 2, High: 3 };
+const rows = audiences.flatMap(({ key, label }) => {
+  const level = ratings[key];
+  return level ? [{ label, level }] : [];
+});
+const Heading = headingLevel;
+---
+
+{rows.length > 0 && (
+  <div class="relevancy">
+    <Heading class="relevancy__heading">Reviewer's relevancy ratings</Heading>
+    <dl class="relevancy__rows">
+      {rows.map((row) => (
+        <div class="relevancy__row">
+          <dt>{row.label}</dt>
+          <dd>
+            <span class="relevancy__meter" aria-hidden="true">
+              {[1, 2, 3].map((segment) => (
+                <span
+                  class:list={[
+                    "relevancy__segment",
+                    { "relevancy__segment--on": segment <= filled[row.level] },
+                  ]}
+                />
+              ))}
+            </span>
+            <span class="relevancy__level">{row.level}</span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+)}
+
+<style>
+  .relevancy__heading {
+    color: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    font-size: var(--text-eyebrow);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .relevancy__rows {
+    margin-top: var(--space-2);
+  }
+
+  .relevancy__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-4);
+    max-width: 560px;
+    padding-block: var(--space-1);
+    font-size: var(--text-small);
+  }
+
+  .relevancy__row dd {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .relevancy__meter {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  .relevancy__segment {
+    width: 34px;
+    height: 10px;
+    background: var(--color-rule);
+  }
+
+  .relevancy__segment--on {
+    background: var(--color-primary);
+  }
+
+  .relevancy__level {
+    min-width: 4.5em;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+/**
+ * Accessibility section content: the editorial board's WCAG letter grade in
+ * a square tile, or a "Not yet reviewed" tile when there is no grade.
+ */
+import { isPlaceholder } from "@/lib/placeholders";
+
+interface Props {
+  grade?: string;
+  laaUrl?: string;
+  laaYear?: number;
+}
+
+const { grade, laaUrl, laaYear } = Astro.props;
+const laaLinked = laaUrl !== undefined && !isPlaceholder(laaUrl);
+---
+
+<div class="grade">
+  {grade ? (
+    <div
+      class="grade__tile"
+      role="img"
+      aria-label={`BISdex WCAG grade ${grade}`}
+    >
+      <span aria-hidden="true">{grade}</span>
+    </div>
+  ) : (
+    <div class="grade__tile grade__tile--none">Not yet reviewed</div>
+  )}
+  <div class="grade__text">
+    <p class="grade__label">BISdex WCAG grade</p>
+    {grade ? (
+      <>
+        <p>
+          Based on the{" "}
+          {laaLinked ? (
+            <a href={laaUrl}>Library Accessibility Alliance review</a>
+          ) : (
+            "Library Accessibility Alliance review"
+          )}{" "}
+          ({laaYear})
+        </p>
+        <p class="grade__note">
+          Grade assigned by BISdex editors from the LAA score.{" "}
+          <a href="/editorial-policy/#grades">How grades are assigned</a>
+        </p>
+      </>
+    ) : (
+      <p class="grade__note">
+        No Library Accessibility Alliance review exists for this source yet.
+      </p>
+    )}
+  </div>
+</div>
+
+<style>
+  .grade {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .grade__tile {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 104px;
+    height: 104px;
+    border-radius: var(--radius);
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: var(--leading-tight);
+  }
+
+  .grade__tile--none {
+    padding: var(--space-2);
+    border: 2px dashed var(--color-logo-gray);
+    background: var(--color-background);
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    font-weight: 600;
+    line-height: var(--leading-small);
+    text-align: center;
+  }
+
+  .grade__text {
+    flex: 1 1 240px;
+  }
+
+  .grade__text p + p {
+    margin-top: var(--space-2);
+  }
+
+  .grade__label {
+    font-weight: 700;
+  }
+
+  .grade__note {
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: var(--leading-small);
+  }
+</style>

@@ -3,7 +3,10 @@
  * Source page: page top, "On this page" links, then each section the source
  * has content for, in a fixed order.
  */
+import GradeTile from "@/components/GradeTile.astro";
+import ReviewItem from "@/components/ReviewItem.astro";
 import SourceSection from "@/components/SourceSection.astro";
+import { REVIEW_FORM_URL } from "@/config";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getSiteContent, type Source } from "@/lib/content";
 import { formatMonth } from "@/lib/dates";
@@ -24,7 +27,9 @@ interface Props {
 
 const { source } = Astro.props;
 const data = source.data;
-const { vendors, sources } = await getSiteContent();
+const { vendors, sources, reviewsBySource } = await getSiteContent();
+const reviews = reviewsBySource.get(source.id) ?? [];
+const reviewCount = `${reviews.length} published ${reviews.length === 1 ? "review" : "reviews"}`;
 const vendor = vendors.get(data.vendor.id)!;
 const sourceNames = new Map(
   sources.map((entry) => [entry.id, entry.data.name]),
@@ -47,6 +52,8 @@ const sections = [
     title: "Use Cases",
     show: teaching.length + commercial.length > 0,
   },
+  { id: "accessibility", title: "Accessibility", show: true },
+  { id: "reviews", title: "Reviews", show: true },
   { id: "faq", title: "FAQ", show: (data.faq?.length ?? 0) > 0 },
 ].filter((section) => section.show);
 
@@ -195,6 +202,52 @@ const titleOf = (id: string) =>
         </div>
       </SourceSection>
     )}
+
+    <SourceSection id="accessibility" title="Accessibility">
+      <GradeTile
+        grade={data.accessibility?.grade}
+        laaUrl={data.accessibility?.laaUrl}
+        laaYear={data.accessibility?.laaYear}
+      />
+    </SourceSection>
+
+    <SourceSection id="reviews" title="Reviews">
+      <p class="section-note" slot="heading-note">
+        {reviewCount}
+        {reviews.length > 1 && " · newest first"}
+      </p>
+      <div class="review-cta">
+        <a
+          class="button-primary"
+          href={REVIEW_FORM_URL}
+          target="_blank"
+          rel="noopener"
+        >
+          Leave a review
+          <span class="visually-hidden"> (opens in a new tab)</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M9 3h4v4M13 3L7 9M11 9.5V13H3V5h3.5"></path>
+          </svg>
+        </a>
+        <p>
+          Reviews are submitted through Google Forms. Contact information is
+          used only for verification and is never published.
+        </p>
+      </div>
+      {reviews.map((review) => (
+        <ReviewItem review={review} />
+      ))}
+    </SourceSection>
 
     {has("faq") && (
       <SourceSection id="faq" title={titleOf("faq")}>
@@ -354,6 +407,52 @@ const titleOf = (id: string) =>
 
   .use-cases ul {
     margin-top: var(--space-2);
+  }
+
+  .section-note {
+    margin-top: var(--space-2);
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: var(--leading-small);
+  }
+
+  .review-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4) var(--space-5);
+    padding: var(--space-5);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+
+  .review-cta p {
+    flex: 1 1 260px;
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: var(--leading-small);
+  }
+
+  .button-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 48px;
+    padding-inline: var(--space-5);
+    border-radius: var(--radius);
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    font-family: var(--font-heading);
+    font-size: var(--text-nav);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .button-primary:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-on-primary);
   }
 
   .faq details {

@@ -1,0 +1,107 @@
+---
+/**
+ * One published review: reviewer descriptor with the verified badge, date,
+ * the reviewer's relevancy ratings, the approved text and any disclosures.
+ * The review text is rendered exactly as approved.
+ */
+import { render } from "astro:content";
+
+import RelevancyMeter from "@/components/RelevancyMeter.astro";
+import type { Review } from "@/lib/content";
+import { formatMonth } from "@/lib/dates";
+
+interface Props {
+  review: Review;
+}
+
+const { review } = Astro.props;
+const data = review.data;
+const { Content } = await render(review);
+const descriptor = [
+  data.role,
+  data.institutionType,
+  data.experience,
+  data.relationship,
+].join(" · ");
+const headingId = `review-${review.id.replaceAll("/", "-")}`;
+---
+
+<article class="review" aria-labelledby={headingId}>
+  <h3 class="visually-hidden" id={headingId}>
+    Review from {formatMonth(data.date)}
+  </h3>
+  <p class="review__descriptor">
+    {descriptor} ·{" "}
+    <span class="review__badge">
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M3 8.5l3.5 3.5L13 4.5"></path>
+      </svg>
+      Verified by BISdex editors
+    </span>
+  </p>
+  <p class="review__date">
+    <time datetime={data.date}>{formatMonth(data.date)}</time>
+  </p>
+  {data.relevancy && <RelevancyMeter {...data.relevancy} />}
+  <div class="review__text">
+    <Content />
+  </div>
+  {data.disclosures?.map((disclosure) => (
+    <p class="review__disclosure">
+      <strong>Disclosure:</strong> {disclosure.label}. {disclosure.text}
+    </p>
+  ))}
+</article>
+
+<style>
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-block: var(--space-6);
+    border-bottom: var(--rule-hair);
+  }
+
+  .review > * {
+    margin: 0;
+  }
+
+  .review:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .review__descriptor,
+  .review__date,
+  .review__disclosure {
+    color: var(--color-text-secondary);
+    font-size: var(--text-small);
+    line-height: var(--leading-small);
+  }
+
+  .review__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .review__text :global(p + p) {
+    margin-top: var(--space-4);
+  }
+
+  .review__disclosure strong {
+    color: var(--color-text);
+  }
+</style>
