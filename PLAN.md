@@ -447,6 +447,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P1-T1 · content.config.ts (sources, reviews, vendors, pages), src/lib helpers (dates, sort, Markdown via marked, placeholders), placeholder source, review, vendor and About page; invalid date, grade and descriptor each fail the build · left unchecked until Q3 fills the descriptor lists
 - 2026-10-19 · P0-T2 · Cloudflare answers in section 10; empty `previews` block in wrangler.jsonc; Q7 steps; Pages CMS questions deferred (operator) · after launch, preview copies carry the production canonical URL, so they don't compete in search
 - 2026-10-19 · P3-T2 · BaseLayout (head, noindex, canonical, font preloads), SiteHeader with typeset wordmark and menu, SiteFooter, IntroBand, 404 page; placeholder index uses the layout · no favicon yet (public/favicon.svg not in repo); logo SVG still Q5
 - 2026-10-19 · P3-T1 · tokens.css, fonts.css, global.css, self-hosted fonts in public/fonts; placeholder index imports global.css · BaseLayout (P3-T2) should take over the stylesheet import
