@@ -1,0 +1,11 @@
+dist/
+.astro/
+node_modules/
+.wrangler/
+package-lock.json
+
+# Editors' handover text, reviews and project documents are kept exactly as written.
+docs/
+src/content/
+PLAN.md
+CLAUDE.md

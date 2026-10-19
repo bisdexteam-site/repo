@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-15. Plan written; no code yet. Next task: P0-T1. Waiting on the operator for the inputs in section 9 (IBISWorld text, page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. P0-T1 done: Astro scaffold builds. Next: P0-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -271,7 +271,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 ### Phase 0: Housekeeping and spikes
 
-- [ ] **P0-T1 · Scaffold the Astro project**
+- [x] **P0-T1 · Scaffold the Astro project**
   - Create a minimal Astro 7 project in the repo root (TypeScript strict, no sample pages or integrations beyond `@astrojs/sitemap`).
   - Add `.nvmrc`, `engines`, the npm scripts in 6.2, ESLint, Prettier, `.gitignore`.
   - Add `wrangler.jsonc` for static assets from `./dist` with the 404 page used for unknown routes (check current Cloudflare docs).
@@ -433,6 +433,8 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-15 | Build on IBISWorld first; other launch sources are added one task each as their text arrives. (operator) |
 | 2026-10-15 | Light testing: the build validates content; no unit tests, no CI. (operator) |
 | 2026-10-15 | No redirects from the old Google Site; a notice there points to the new address. |
+| 2026-10-19 | TypeScript pinned to 6.0.x: `@astrojs/check` and `typescript-eslint` don't support TypeScript 7 yet. Node floor is 22.22.3 (`eslint-plugin-astro` requirement). |
+| 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
 
@@ -440,6 +442,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P0-T1 · Astro 7.4 scaffold, tooling, wrangler.jsonc, config, robots.txt, README · Worker name `bisdex` must match the Worker created in P0-T3; SITE_URL placeholder until Q4
 - 2026-10-19 · operator request · IBISWorld handover complete (review date, no Use Cases, no summary); summary field dropped site-wide · Q1 closed
 - 2026-10-19 · operator request · IBISWorld review descriptor and disclosures (none) added to handover · review date still needed
 - 2026-10-19 · operator request · IBISWorld review text added to handover · review date and descriptor values still needed
