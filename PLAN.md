@@ -309,7 +309,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 ### Phase 2: Import
 
 - [ ] **P2-T1 · IBISWorld source and reviews**
-  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). Add the vendor to `vendors.yaml`.
+  - Follow 5.6 with the IBISWorld handover text. Grade **B** (editorial board, 2026-10-15). LAA review: `https://www.libraryaccessibility.org/evaluation/ibisworld`, year 2025 (operator, 2026-10-19). Add the vendor to `vendors.yaml`.
   - Remove the placeholder source and review from P1-T1.
   - **Done when:** the build passes, the handover file is in `docs/handover/`, and the handoff note lists any fields left as placeholders.
   - *Depends on P1-T1. Needs Q1.*
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q1 | IBISWorld handover text, including the LAA review link and year | Operator / editors | P2-T1 and every Phase 4 task |
+| Q1 | IBISWorld handover text (LAA link and year now recorded in P2-T1) | Operator / editors | P2-T1 and every Phase 4 task |
 | Q2 | About, Editorial Policy and Disclaimer copy (the brief's drafts) | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
@@ -439,4 +439,5 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · operator request · IBISWorld LAA review link and year added to P2-T1 · handover text (Q1) still needed
 - 2026-10-15 · operator request · PLAN.md, CLAUDE.md and docs/DESIGN.md (v0.2) added · inputs Q1 to Q3 needed before Phase 2
