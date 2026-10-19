@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. P0-T1 done: Astro scaffold builds. Next: P0-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. P0-T1 and P3-T1 done: scaffold builds with tokens, fonts and base styles. Next: P0-T2 or P3-T2 (agent) and P0-T3 (operator). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -321,7 +321,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 ### Phase 3: Layout shell
 
-- [ ] **P3-T1 · Tokens, fonts and base styles**
+- [x] **P3-T1 · Tokens, fonts and base styles**
   - `tokens.css` with every token in DESIGN.md section 2; self-hosted Barlow Condensed (500, 600, 700) and Source Sans 3 (400, 600, 700, 400 italic); `global.css` with base type, links, focus, skip-link styles.
   - **Done when:** no raw hex values outside `tokens.css`, and no request to any font host in the built HTML.
   - *Depends on P0-T1.*
@@ -434,6 +434,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-15 | Light testing: the build validates content; no unit tests, no CI. (operator) |
 | 2026-10-15 | No redirects from the old Google Site; a notice there points to the new address. |
 | 2026-10-19 | TypeScript pinned to 6.0.x: `@astrojs/check` and `typescript-eslint` don't support TypeScript 7 yet. Node floor is 22.22.3 (`eslint-plugin-astro` requirement). |
+| 2026-10-19 | Fonts: WOFF2 files taken from the Fontsource npm packages (`@fontsource/barlow-condensed` 5.3.0, `@fontsource/source-sans-3` 5.3.1) and committed to `public/fonts/` with their OFL licenses; latin and latin-ext subsets, split by `unicode-range` so latin-ext loads only when needed. No font package is a dependency. |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -442,6 +443,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-10-19 · P3-T1 · tokens.css, fonts.css, global.css, self-hosted fonts in public/fonts; placeholder index imports global.css · BaseLayout (P3-T2) should take over the stylesheet import
 - 2026-10-19 · P0-T1 · Astro 7.4 scaffold, tooling, wrangler.jsonc, config, robots.txt, README · Worker name `bisdex` must match the Worker created in P0-T3; SITE_URL placeholder until Q4
 - 2026-10-19 · operator request · IBISWorld handover complete (review date, no Use Cases, no summary); summary field dropped site-wide · Q1 closed
 - 2026-10-19 · operator request · IBISWorld review descriptor and disclosures (none) added to handover · review date still needed

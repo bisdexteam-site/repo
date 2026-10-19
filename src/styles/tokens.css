@@ -1,0 +1,75 @@
+/*
+ * Design tokens. Every color in the site is defined here; components and
+ * other stylesheets refer to these custom properties, never to raw values.
+ */
+
+:root {
+  /* Color: brand palette */
+  --color-primary: #083c48;
+  --color-primary-hover: #0f5a6b;
+  --color-logo-gray: #98a2af; /* decorative only; never for meaningful text */
+  --color-text-secondary: #5b6672;
+  --color-text: #1f2a30;
+  --color-surface: #f2f5f6;
+  --color-background: #ffffff;
+  --color-on-primary: #ffffff; /* text on primary or primary-hover fills */
+
+  /* Color: supporting neutrals */
+  --color-rule: #e1e6e9;
+  --color-border-subtle: #d5dbdf;
+
+  /* Typography: families */
+  --font-heading: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Typography: sizes (fluid sizes shrink to the mobile values at 360px) */
+  --text-wordmark: 2.75rem; /* 44px */
+  --text-wordmark-subtitle: 0.9375rem; /* 15px */
+  --text-nav: 1.25rem; /* 20px */
+  --text-title-source: clamp(2.75rem, 2.07rem + 3.01vw, 4rem); /* 44 to 64px */
+  --text-title-page: clamp(2.75rem, 2.34rem + 1.81vw, 3.5rem); /* 44 to 56px */
+  --text-intro: clamp(2.125rem, 1.72rem + 1.81vw, 2.875rem); /* 34 to 46px */
+  --text-h2: clamp(1.5rem, 1.36rem + 0.6vw, 1.75rem); /* 24 to 28px */
+  --text-h3: 1.125rem; /* 18px */
+  --text-lead: 1.375rem; /* 22px */
+  --text-body: 1.125rem; /* 18px */
+  --text-small: 0.9375rem; /* 15px */
+  --text-eyebrow: 1rem; /* 16px */
+
+  /* Typography: line heights */
+  --leading-tight: 1;
+  --leading-title: 1.05;
+  --leading-intro: 1.12;
+  --leading-heading: 1.2;
+  --leading-lead: 1.45;
+  --leading-small: 1.5;
+  --leading-body: 1.6;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 36px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Shape and lines */
+  --radius: 4px;
+  --rule-hair: 1px solid var(--color-rule);
+  --rule-frame: 1px solid var(--color-logo-gray);
+  --rule-strong: 2px solid var(--color-primary);
+  --brand-bar: 6px solid var(--color-primary);
+
+  /* Layout */
+  --width-container: 1120px;
+  --width-reading: 720px;
+  --width-reading-wide: 780px;
+  --gutter: var(--space-5);
+
+  /* Focus */
+  --focus-ring: 3px solid var(--color-primary-hover);
+  --focus-offset: 3px;
+}
