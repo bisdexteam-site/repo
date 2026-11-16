@@ -406,11 +406,41 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
 | Q2 | Disclaimer copy (the brief's draft); About and Editorial Policy copy received 2026-10-19. Also: where the accessibility grade scale (`#grades`) goes, since the Editorial Policy copy has no grades section | Operator | P2-T2, P4-T5 |
-| Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource | Operator | Finishing P1-T1 |
+| Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource. Form options received 2026-11-16 (9.1); mapping published reviews to them is deferred (operator) | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
 | Q6 | The other three launch sources and their handover text | Editors | Phase 6 |
 | Q7 | Web Analytics beacon token (Web Analytics > Add a site, hostname = the `workers.dev` address, then the token from the snippet under Manage site) | Operator | P7-T1 |
+
+
+### 9.1 Reviewer descriptors: form options and deviations
+
+Revisit with the operator before launch. Until then, new reviews use the descriptor wording the operator supplies, and each one that differs from the form is added to the deviations table.
+
+**Review form dropdown options** (read 2026-11-16):
+
+- Reviewer Role: Business librarian or business subject liaison; Subject liaison librarian (other subject areas); Electronic resources, acquisitions, or licensing librarian; Collection development librarian; Instruction or teaching librarian; Data services librarian; Library administrator; Corporate, special, or law library librarian; Knowledge manager or competitive intelligence professional; Library and information science faculty; Other information professional
+- Institution Type: Doctoral research university (R1 or R2); Other doctoral or research institution; Master's college or university; Baccalaureate college; Community or technical college; Specialized institution (e.g., standalone business school); Public library; Corporate or special library; Government library; Non-US academic institution
+- Experience Level with Resource: Beginner; Intermediate; Advanced; Expert (skill with the resource, not years)
+- Relationship to Resource: Primary User; Evaluator / Selector; Administrator; Former User
+
+**Form issues to raise:** the "Relevancy Rating by Audience" grid appears twice; required fields could not be confirmed; there is no review date question (use the submission month unless told otherwise); confirm the site's `forms.gle` link opens this form.
+
+**Deviations in published reviews:**
+
+| Review | Field | Published value | Nearest form option | Note |
+| --- | --- | --- | --- | --- |
+| ibisworld/2022-07-1 | institutionType | doctoral research university | Doctoral research university (R1 or R2) | R1/R2 not confirmed |
+| ibisworld/2022-07-1 | experience | 10+ years of experience | none | Form measures skill level, not years |
+| ibisworld/2022-07-1 | relationship | evaluator/selector | Evaluator / Selector | Wording only |
+| factset/2024-07-1 | role | Business librarian | Business librarian or business subject liaison | Wording only |
+| factset/2024-07-1 | institutionType | doctoral research university | Doctoral research university (R1 or R2) | R1/R2 not confirmed |
+| factset/2024-07-1 | experience | 10+ years of experience | none | Form measures skill level, not years |
+| factset/2024-07-1 | relationship | administrator | Administrator | Wording only |
+| bcc-research/2023-05-1 | role | Business librarian | Business librarian or business subject liaison | Wording only |
+| bcc-research/2023-05-1 | institutionType | doctoral research university | Doctoral research university (R1 or R2) | R1/R2 not confirmed |
+| bcc-research/2023-05-1 | experience | 10+ years of experience | none | Form measures skill level, not years |
+| bcc-research/2023-05-1 | relationship | evaluator/selector | Evaluator / Selector | Wording only |
 
 ---
 
@@ -453,6 +483,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-16 · operator request · review form options recorded and descriptor deviations listed in 9.1 · mapping deferred; each new review's deviations get added to 9.1
 - 2026-11-16 · operator request · BCC Research review date corrected to 2023-05 (file renamed); vendor name "BCC Research, LLC"; Alternatives restructuring approved · vendor URL and LAA review year still needed
 - 2026-11-16 · P6-T2 · BCC Research source, review (2025-08) and vendor; handover saved; "Not yet graded" accessibility state; IBISWorld's BCC Research alternative now links to its page · vendor URL is `[Vendor URL]`; LAA review year not supplied; alternatives restructuring awaits operator approval
 - 2026-10-19 · operator request · Editorial Policy copy (handover saved) and /editorial-policy/ page with "On this page" sidebar; Editorial Policy part of P2-T2 and P4-T5 done · copy has no Accessibility grades section, so /editorial-policy/#grades lands at the page top (Q2); Disclaimer copy still needed
