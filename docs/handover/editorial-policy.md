@@ -1,4 +1,4 @@
-<!-- Editors' text for the Editorial Policy page, attached by the operator on 2026-10-19 (headed "BISdex Editorial Policy", "Updated Oct 19, 2026"). Verbatim; not published. Operator edits on 2026-11-16: "Who may submit" first sentence reworded; moderation step 4 (Wording for legal risk) removed and the list renumbered. -->
+<!-- Editors' text for the Editorial Policy page, attached by the operator on 2026-10-19 (headed "BISdex Editorial Policy", "Updated Oct 19, 2026"). Verbatim; not published. Operator edits on 2026-11-16: "Who may submit" first sentence reworded; moderation step 4 (Wording for legal risk) removed and the list renumbered; "Updated" date changed to Nov 16, 2026. -->
 
 BISdex Editorial Policy
 Updated Oct 19, 2026

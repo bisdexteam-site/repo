@@ -1,6 +1,6 @@
 ---
 title: "BISdex Editorial Policy"
-lead: "Updated Oct 19, 2026"
+lead: "Updated Nov 16, 2026"
 ---
 
 ## Purpose and scope
