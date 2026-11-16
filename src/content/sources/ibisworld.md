@@ -20,6 +20,7 @@ alternatives:
   - name: Mintel
     note: market report provider; can often be used in similar ways
   - name: BCC Research
+    source: bcc-research
     note: market report provider; can often be used in similar ways
   - name: MarketResearch.com
     note: market report provider; can often be used in similar ways

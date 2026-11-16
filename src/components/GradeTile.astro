@@ -1,7 +1,9 @@
 ---
 /**
  * Accessibility section content: the editorial board's WCAG letter grade in
- * a square tile, or a "Not yet reviewed" tile when there is no grade.
+ * a square tile; a "Not yet graded" tile when a Library Accessibility
+ * Alliance review exists but no grade has been assigned; or a "Not yet
+ * reviewed" tile when there is no LAA review.
  */
 import { isPlaceholder } from "@/lib/placeholders";
 
@@ -25,7 +27,9 @@ const laaLinked = laaUrl !== undefined && !isPlaceholder(laaUrl);
       <span aria-hidden="true">{grade}</span>
     </div>
   ) : (
-    <div class="grade__tile grade__tile--none">Not yet reviewed</div>
+    <div class="grade__tile grade__tile--none">
+      {laaUrl ? "Not yet graded" : "Not yet reviewed"}
+    </div>
   )}
   <div class="grade__text">
     <p class="grade__label">BISdex WCAG grade</p>
@@ -42,6 +46,22 @@ const laaLinked = laaUrl !== undefined && !isPlaceholder(laaUrl);
         </p>
         <p class="grade__note">
           Grade assigned by BISdex editors from the LAA score.{" "}
+          <a href="/editorial-policy/#grades">How grades are assigned</a>
+        </p>
+      </>
+    ) : laaUrl ? (
+      <>
+        <p>
+          {laaLinked ? (
+            <a href={laaUrl}>Library Accessibility Alliance review</a>
+          ) : (
+            "Library Accessibility Alliance review"
+          )}
+          {laaYear ? ` (${laaYear})` : ""}
+        </p>
+        <p class="grade__note">
+          The LAA review does not provide a score, so BISdex editors have not
+          assigned a grade.{" "}
           <a href="/editorial-policy/#grades">How grades are assigned</a>
         </p>
       </>

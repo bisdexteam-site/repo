@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done, plus the About and Editorial Policy pages: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done, plus the About and Editorial Policy pages: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). BCC Research added 2026-11-16 (P6-T2). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -379,7 +379,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 ### Phase 6: Remaining launch sources
 
 - [x] **P6-T1 · Second launch source** (Q6): FactSet
-- [ ] **P6-T2 · Third launch source** (Q6)
+- [x] **P6-T2 · Third launch source** (Q6): BCC Research
 - [ ] **P6-T3 · Fourth launch source** (Q6)
   - Each: follow 5.6, add the vendor if new, and link alternatives that now exist in BISdex.
   - **Done when:** the source builds and appears in the index.
@@ -443,6 +443,8 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | 2026-10-19 | FactSet review: the handover's Researchers rating "Low to Average" is published as Average; the source's last-reviewed date and the review date are both July 2024; no accessibility grade yet; descriptor role "Business librarian", relationship "administrator" (added to the interim descriptor lists). (operator) |
 | 2026-10-19 | About page copy comes from the editors' handover ("About BISdex"): lead paragraph, What we cover, Our history. It replaces the About sections listed in DESIGN.md section 6; no Who we are, Independence, How to cite or Contact sections. (operator) |
 | 2026-10-19 | Editorial Policy copy comes from the editors' handover ("BISdex Editorial Policy", updated Oct 19, 2026), with its own eleven sections. It replaces the Editorial Policy sections listed in DESIGN.md section 7 and section 4. The "Updated" line is the intro band lead; the sidebar lists the page's h2s. (operator) |
+| 2026-11-16 | BCC Research: the review's closing sentence on license terms is left out of the review and the handover file (operator approved the edit, since license-term data can't be stored); review date August 2025, the same as last reviewed; the handover's "Partner content from:" list becomes one Content entry named "Partner content". (operator) |
+| 2026-11-16 | Accessibility has a third state, "Not yet graded": an LAA review exists but provides no score. `accessibility.grade` and `laaYear` are optional; a grade still needs `laaYear`. Added to DESIGN.md 5.5. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -451,6 +453,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-16 · P6-T2 · BCC Research source, review (2025-08) and vendor; handover saved; "Not yet graded" accessibility state; IBISWorld's BCC Research alternative now links to its page · vendor URL is `[Vendor URL]`; LAA review year not supplied; alternatives restructuring awaits operator approval
 - 2026-10-19 · operator request · Editorial Policy copy (handover saved) and /editorial-policy/ page with "On this page" sidebar; Editorial Policy part of P2-T2 and P4-T5 done · copy has no Accessibility grades section, so /editorial-policy/#grades lands at the page top (Q2); Disclaimer copy still needed
 - 2026-10-19 · operator request · About copy (handover saved) and /about/ page from pages/about.md; About part of P2-T2 and P4-T5 done · Editorial Policy and Disclaimer copy still needed (Q2); P2-T2 and P4-T5 stay unchecked until they are done
 - 2026-10-19 · P6-T1 · FactSet source, review (2024-07) and vendor; handover saved · vendor URL is `[Vendor URL]`; old Google Site links dropped from Best known for and Alternatives; one date given, used for both last-reviewed and review dates

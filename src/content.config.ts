@@ -83,9 +83,13 @@ const sources = defineCollection({
       .optional(),
     accessibility: z
       .object({
-        grade: z.enum(GRADES),
+        grade: z.enum(GRADES).optional(),
         laaUrl: urlOrPlaceholder,
-        laaYear: z.number().int().min(2000).max(2100),
+        laaYear: z.number().int().min(2000).max(2100).optional(),
+      })
+      .refine((a) => a.grade === undefined || a.laaYear !== undefined, {
+        message: "A grade needs laaYear, the year of the LAA review",
+        path: ["laaYear"],
       })
       .optional(),
     faq: z

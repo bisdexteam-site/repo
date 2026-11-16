@@ -225,9 +225,10 @@ Optional sections with no content are omitted, along with their "On this page" l
 
 ### 5.5 Accessibility section
 
-Two states:
+Three states:
 
 - **Graded:** a 104px square tile in primary teal with the letter grade in white (heading font 700, 56px), `role="img"` and `aria-label="BISdex WCAG grade B+"`. Beside it: "BISdex WCAG grade", "Based on the Library Accessibility Alliance review ([year])" (linked), and a secondary note "Grade assigned by BISdex editors from the LAA score. How grades are assigned" (linked to Editorial Policy, `#grades`).
+- **Not yet graded:** an LAA review exists but provides no score. The same dashed tile as "Not yet reviewed" with the text "Not yet graded". Beside it: "BISdex WCAG grade", a link to the "Library Accessibility Alliance review" (with the year when known), and a secondary note "The LAA review does not provide a score, so BISdex editors have not assigned a grade. How grades are assigned" (linked to Editorial Policy, `#grades`).
 - **Not yet reviewed:** the same tile size with a 2px dashed logo-gray border and the text "Not yet reviewed" in secondary gray, plus a note that no LAA review exists yet.
 
 Grades follow the GPA-style table in Section 7. The editorial board assigns them; they are never part of a review.
