@@ -483,6 +483,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-16 · operator request · Editorial Policy: "Who may submit" limited to librarians or information professionals; moderation step "Wording for legal risk" removed, list renumbered 1 to 5 (page and handover) · "Updated Oct 19, 2026" line left unchanged pending the operator
 - 2026-11-16 · operator request · review form options recorded and descriptor deviations listed in 9.1 · mapping deferred; each new review's deviations get added to 9.1
 - 2026-11-16 · operator request · BCC Research review date corrected to 2023-05 (file renamed); vendor name "BCC Research, LLC"; Alternatives restructuring approved · vendor URL and LAA review year still needed
 - 2026-11-16 · P6-T2 · BCC Research source, review (2025-08) and vendor; handover saved; "Not yet graded" accessibility state; IBISWorld's BCC Research alternative now links to its page · vendor URL is `[Vendor URL]`; LAA review year not supplied; alternatives restructuring awaits operator approval

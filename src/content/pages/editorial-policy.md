@@ -18,7 +18,7 @@ Four commitments guide every editorial decision.
 
 ## Who may submit and what we expect
 
-Only people who have used a resource themselves may review it. Vendors, their employees, and anyone paid or rewarded by a vendor may not submit reviews.
+Only librarians or information professionals who have used a resource may review it. Vendors, their employees, and anyone paid or rewarded by a vendor may not submit reviews.
 
 A review must:
 
@@ -45,9 +45,8 @@ Every review is read by a BISdex moderator before it is published. Nothing goes 
 1. **Submission.** A reviewer completes the Electronic Resource Review Form, either from the "Leave a review" button on a source page or for a resource not yet listed.
 2. **Eligibility check.** A moderator confirms the submission is complete, concerns a business information resource, and appears to come from a real user with first-hand experience.
 3. **Content review.** The moderator checks the review against this policy, looking for false statements of fact, personal attacks, confidential terms, and undisclosed conflicts of interest.
-4. **Wording for legal risk.** Where a statement could be read as a factual claim rather than an opinion, the moderator may ask the reviewer to reword it or to frame it as personal experience.
-5. **Decision.** The moderator approves the review, returns it to the reviewer for revision, or declines it.
-6. **Publication.** Editors post approved reviews to the resource's Reviews section.
+4. **Decision.** The moderator approves the review, returns it to the reviewer for revision, or declines it.
+5. **Publication.** Editors post approved reviews to the resource's Reviews section.
 
 Moderators may correct spelling and formatting. They will not change a review or the substance of their assessment.
 

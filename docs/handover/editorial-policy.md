@@ -1,4 +1,4 @@
-<!-- Editors' text for the Editorial Policy page, attached by the operator on 2026-10-19 (headed "BISdex Editorial Policy", "Updated Oct 19, 2026"). Verbatim; not published. -->
+<!-- Editors' text for the Editorial Policy page, attached by the operator on 2026-10-19 (headed "BISdex Editorial Policy", "Updated Oct 19, 2026"). Verbatim; not published. Operator edits on 2026-11-16: "Who may submit" first sentence reworded; moderation step 4 (Wording for legal risk) removed and the list renumbered. -->
 
 BISdex Editorial Policy
 Updated Oct 19, 2026
@@ -11,7 +11,7 @@ Four commitments guide every editorial decision.
 •	Integrity. We do not allow fake reviews, coordinated campaigns, or misleading claims.
 •	Objectivity. Reviews are personal assessments. They reflect each reviewer's context and judgment. Opinions in a review belong to its author, not to BISdex, the Business Information Sources Committee, BRASS, RUSA, or ALA.
 Who may submit and what we expect
-Only people who have used a resource themselves may review it. Vendors, their employees, and anyone paid or rewarded by a vendor may not submit reviews.
+Only librarians or information professionals who have used a resource may review it. Vendors, their employees, and anyone paid or rewarded by a vendor may not submit reviews.
 A review must:
 •	Describe your own experience with the resource, honestly and in good faith
 •	Avoid confidential information, such as pricing or terms covered by a nondisclosure clause
@@ -28,9 +28,8 @@ Every review is read by a BISdex moderator before it is published. Nothing goes 
 1.	Submission. A reviewer completes the Electronic Resource Review Form, either from the "Leave a review" button on a source page or for a resource not yet listed.
 2.	Eligibility check. A moderator confirms the submission is complete, concerns a business information resource, and appears to come from a real user with first-hand experience.
 3.	Content review. The moderator checks the review against this policy, looking for false statements of fact, personal attacks, confidential terms, and undisclosed conflicts of interest.
-4.	Wording for legal risk. Where a statement could be read as a factual claim rather than an opinion, the moderator may ask the reviewer to reword it or to frame it as personal experience.
-5.	Decision. The moderator approves the review, returns it to the reviewer for revision, or declines it.
-6.	Publication. Editors post approved reviews to the resource's Reviews section.
+4.	Decision. The moderator approves the review, returns it to the reviewer for revision, or declines it.
+5.	Publication. Editors post approved reviews to the resource's Reviews section.
 Moderators may correct spelling and formatting. They will not change a review or the substance of their assessment.
 Reviewer privacy
 Published reviews do not show the reviewer's name or institution. Instead, each review carries a short descriptor based on Carnegie classification and a range of experience, for example "R1 librarian with 3 to 5 years of experience."
