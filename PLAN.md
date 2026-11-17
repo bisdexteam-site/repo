@@ -411,6 +411,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
 | Q6 | The other three launch sources and their handover text | Editors | Phase 6 |
 | Q7 | Web Analytics beacon token (Web Analytics > Add a site, hostname = the `workers.dev` address, then the token from the snippet under Manage site) | Operator | P7-T1 |
+| Q8 | Editorial Policy section explaining reviewers' relevancy ratings (the three audiences and what Low, Average and High mean). Operator will circle back | Operator | Nothing; the ratings already display on reviews |
 
 
 ### 9.1 Reviewer descriptors: form options and deviations
@@ -490,6 +491,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Editorial Policy audit edits: Disclaimer section now links to /disclaimer/; "Verified by BISdex editors" defined; spelling-and-formatting rule clarified; descriptor example matches the site; corrections wording uses "source information" · relevancy ratings section (Q8); "Updated" date wording pending operator
 - 2026-11-17 · P2-T2, P4-T5 · Disclaimer copy (handover saved) and /disclaimer/ page; footer disclaimer link now resolves; About, Editorial Policy and Disclaimer all done · operator may confirm wording with the RUSA office before launch
 - 2026-11-17 · operator request · Editorial Policy Accessibility grades section with grade table; grade links now land on it; Statista vendor "Statista, Inc."; Statista alternatives approved · none
 - 2026-11-17 · operator request · Statista accessibility: grade B, LAA link, year 2026 · none

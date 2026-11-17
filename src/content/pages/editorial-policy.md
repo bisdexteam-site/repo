@@ -48,11 +48,13 @@ Every review is read by a BISdex moderator before it is published. Nothing goes 
 4. **Decision.** The moderator approves the review, returns it to the reviewer for revision, or declines it.
 5. **Publication.** Editors post approved reviews to the resource's Reviews section.
 
-Moderators may correct spelling and formatting. They will not change a review or the substance of their assessment.
+Reviews marked "Verified by BISdex editors" have been through this process: editors verify the reviewer's identity, check for conflicts of interest, and evaluate the review against this policy.
+
+Before a review is published, moderators may correct spelling and formatting. They do not change the reviewer's wording, meaning, or assessment, and they do not edit a review once it is published.
 
 ## Reviewer privacy
 
-Published reviews do not show the reviewer's name or institution. Instead, each review carries a short descriptor based on Carnegie classification and a range of experience, for example "R1 librarian with 3 to 5 years of experience."
+Published reviews do not show the reviewer's name or institution. Instead, each review carries a short descriptor built from the reviewer's role, institution type, experience, and relationship to the resource, for example "Business librarian · doctoral research university · 10+ years of experience · evaluator/selector."
 
 Moderators see the reviewer's contact details only so they can follow up. BISdex does not share those details with vendors or the public.
 
@@ -98,11 +100,11 @@ A source page shows "Not yet graded" when an LAA evaluation exists but does not 
 
 ## Corrections and concerns
 
-Anyone, including a vendor, may report a factual error. Moderators will review the report and respond. Vendors may correct factual errors in "About this resource" content by communicating changes via email.
+Anyone, including a vendor, may report a factual error. Moderators will review the report and respond. Vendors may request corrections to a source page's source information, such as its Description and Content sections, by email.
 
 ## Disclaimer
 
-Reviews are the views of their authors. BISdex makes no guarantee that reviews are complete or accurate and is not responsible for statements made in them.
+See the [Disclaimer](/disclaimer/) for limits on the information and reviews on this site.
 
 ## Contact
 
