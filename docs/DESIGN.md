@@ -1,6 +1,6 @@
 # BISdex Design Specification
 
-Version 0.3, October 2026
+Version 0.4, November 2026
 Source documents: *BISdex site brief* and the *BISdex Site Mockups* design canvas
 
 This spec describes how the new BISdex site should look and behave. It follows the brief and the reviewed mockups and guides the Astro build. Section 12 records how the open decisions from version 0.1 were settled.
@@ -8,6 +8,8 @@ This spec describes how the new BISdex site should look and behave. It follows t
 **Changes from 0.1:** relevancy ratings move from a source-level section into each review (5.4, 5.6, 5.7); the summary strip no longer includes relevancy (5.1); the open decisions are settled (12).
 
 **Changes from 0.2:** no one-line summary under the source page title; the Description section covers it (5.1, 5.4).
+
+**Changes from 0.3:** the home intro splits into a centered h1 and a "By and for librarians" ribbon above it; the home intro line drops to 42px (2.2, 3.3, 4).
 
 ---
 
@@ -69,7 +71,7 @@ Type scale (desktop; see 2.4 for mobile):
 | Main nav | Heading | 600 | 20px | Uppercase, +0.4px | Primary |
 | Page title (source) | Heading | 700 | 64px / 1 | none | Primary |
 | Page title (text pages) | Heading | 700 | 56px / 1.05 | none | Primary |
-| Home intro line | Heading | 600 | 46px / 1.12 | none | Primary |
+| Home intro line | Heading | 600 | 42px / 1.12 | none | Primary |
 | Section heading (h2) | Heading | 700 | 26 to 28px / 1.2 | Uppercase, +0.6px | Primary |
 | Sub-heading (h3) | Body | 700 | 18px | none | Text |
 | Lead paragraph | Body | 400 | 22px / 1.45 to 1.5 | none | Text |
@@ -108,7 +110,7 @@ Rules:
 - Layout is fluid and built with flex-wrap and CSS grid, so it reflows without hard breakpoints. Reference widths:
   - **Wide (1024px and up):** source page sections use a two-column layout (heading column 200 to 240px, content column).
   - **Narrow (below about 820px):** section headings stack above their content; the Editorial sidebar stacks above the article; index columns collapse to one.
-- Mobile type: page titles scale down to about 44px, home intro to about 34px, section headings to 24px (use `clamp()`).
+- Mobile type: page titles scale down to about 44px, home intro to about 32px, section headings to 24px (use `clamp()`).
 - No horizontal page scroll at 320px. Wide tables scroll inside their own box.
 
 ---
@@ -131,6 +133,8 @@ First focusable element on every page: "Skip to main content", visually hidden u
 ### 3.3 Intro band
 
 Full-width `--color-surface` band under the header holding the page h1 (and, on About, the lead paragraph). Bottom hairline rule.
+
+On Home only, a **ribbon** sits between the header and the band: a full-width `--color-primary` strip with one centered line of white text, set in the main nav style (heading font 600, 20px, uppercase, +0.4px), 12px vertical padding. The home band centers its h1 (max width 860px).
 
 ### 3.4 Footer (site-wide)
 
@@ -171,12 +175,13 @@ Inline stroke SVG only, 14 to 16px, `stroke="currentColor"`, `aria-hidden="true"
 Structure:
 
 1. Header
-2. Intro band with the h1: "Quick insights into leading & emerging business information sources; by and for librarians"
-3. Index section
+2. Ribbon reading "By and for librarians" (3.3)
+3. Intro band with the centered h1: "Quick insights into leading & emerging business information sources"
+4. Index section
    - Heading row: h2 "Sources A to Z" with a count on the right ("4 sources at launch"), 2px primary rule below.
    - Source names only, each a link to its source page, 20px semibold, underlined, 1px hairline between rows.
    - Layout: grouped under letter headings (34px heading font in logo gray, decorative), in a responsive grid (`repeat(auto-fill, minmax(240px, 1fr))`). A plain multi-column list without letters was the reviewed alternative; keep the grouping switchable in one place.
-4. Footer
+5. Footer
 
 Rules: alphabetical by source name, ignoring leading "The"; the list is generated from the source collection at build time.
 

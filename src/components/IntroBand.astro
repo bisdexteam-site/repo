@@ -1,20 +1,27 @@
 ---
 /**
  * Full-width band under the header holding the page h1 and an optional
- * lead paragraph.
+ * lead paragraph. An optional ribbon line sits in a primary strip above it.
  */
 
 interface Props {
   title: string;
   lead?: string;
+  /** Short line shown in a primary-colored strip above the band. */
+  ribbon?: string;
   /** "intro" is the home page intro line; "page" is a text page title. */
   size?: "page" | "intro";
 }
 
-const { title, lead, size = "page" } = Astro.props;
+const { title, lead, ribbon, size = "page" } = Astro.props;
 ---
 
-<div class="intro-band">
+{ribbon && (
+  <div class="intro-ribbon">
+    <p class="container intro-ribbon__text">{ribbon}</p>
+  </div>
+)}
+<div class:list={["intro-band", `intro-band--${size}`]}>
   <div class="container">
     <div class="intro-band__content">
       <h1 class:list={["intro-band__title", `intro-band__title--${size}`]}>
@@ -26,6 +33,21 @@ const { title, lead, size = "page" } = Astro.props;
 </div>
 
 <style>
+  .intro-ribbon {
+    background: var(--color-primary);
+  }
+
+  .intro-ribbon__text {
+    padding-block: var(--space-3);
+    color: var(--color-on-primary);
+    font-family: var(--font-heading);
+    font-size: var(--text-nav);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   .intro-band {
     border-bottom: var(--rule-hair);
     background: var(--color-surface);
@@ -34,6 +56,16 @@ const { title, lead, size = "page" } = Astro.props;
 
   .intro-band__content {
     max-width: var(--width-reading);
+  }
+
+  .intro-band--intro {
+    padding-block: var(--space-7) var(--space-8);
+    text-align: center;
+  }
+
+  .intro-band--intro .intro-band__content {
+    max-width: 860px;
+    margin-inline: auto;
   }
 
   .intro-band__title--page {
