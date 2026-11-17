@@ -227,8 +227,8 @@ Optional sections with no content are omitted, along with their "On this page" l
 
 Three states:
 
-- **Graded:** a 104px square tile in primary teal with the letter grade in white (heading font 700, 56px), `role="img"` and `aria-label="BISdex WCAG grade B+"`. Beside it: "BISdex WCAG grade", "Based on the Library Accessibility Alliance review ([year])" (linked), and a secondary note "Grade assigned by BISdex editors from the LAA score. How grades are assigned" (linked to Editorial Policy, `#grades`).
-- **Not yet graded:** an LAA review exists but provides no score. The same dashed tile as "Not yet reviewed" with the text "Not yet graded". Beside it: "BISdex WCAG grade", a link to the "Library Accessibility Alliance review" (with the year when known), and a secondary note "The LAA review does not provide a score, so BISdex editors have not assigned a grade. How grades are assigned" (linked to Editorial Policy, `#grades`).
+- **Graded:** a 104px square tile in primary teal with the letter grade in white (heading font 700, 56px), `role="img"` and `aria-label="BISdex WCAG grade B+"`. Beside it: "BISdex WCAG grade", "Based on the Library Accessibility Alliance review ([year])" (linked), and a secondary note "Grade assigned by BISdex editors from the LAA score. How grades are assigned" (linked to Editorial Policy, `#accessibility-grades`).
+- **Not yet graded:** an LAA review exists but provides no score. The same dashed tile as "Not yet reviewed" with the text "Not yet graded". Beside it: "BISdex WCAG grade", a link to the "Library Accessibility Alliance review" (with the year when known), and a secondary note "The LAA review does not provide a score, so BISdex editors have not assigned a grade. How grades are assigned" (linked to Editorial Policy, `#accessibility-grades`).
 - **Not yet reviewed:** the same tile size with a 2px dashed logo-gray border and the text "Not yet reviewed" in secondary gray, plus a note that no LAA review exists yet.
 
 Grades follow the GPA-style table in Section 7. The editorial board assigns them; they are never part of a review.
@@ -274,7 +274,7 @@ Single reading column (720px) under an intro band holding the h1 "About BISdex" 
 
 - Intro band with the h1.
 - Two-column layout on wide screens: an "On this page" sidebar (220 to 260px, 2px primary rule above, not sticky) and the article (720px). The sidebar stacks above the article on narrow screens.
-- Sections with anchors: Scope; Two kinds of content; Submitting a review; Reviewer guidelines (bulleted, bold lead-ins); Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#grades`); Independence.
+- Sections with anchors: Scope; Two kinds of content; Submitting a review; Reviewer guidelines (bulleted, bold lead-ins); Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#accessibility-grades`); Independence.
 - **Grade table:** real `<table>` with a `<caption>`, `<th scope="col">`, a 2px primary rule under the header, alternating surface striping, and a logo-gray divider between the two score/grade column pairs. Wrapped in a horizontally scrollable box on narrow screens.
 
 | Score | Grade | Score | Grade |

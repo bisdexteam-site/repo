@@ -1,10 +1,10 @@
-<!-- Editors' text for Statista, attached by the operator on 2026-11-17. Verbatim; style-guide instructions under each heading left out; not published. LAA review URL and grade B supplied by the operator on 2026-11-17; LAA page shows a WCAG Criteria Compliance score of 84% and an evaluation date of 02/23/2026. -->
+<!-- Editors' text for Statista, attached by the operator on 2026-11-17. Verbatim; style-guide instructions under each heading left out; not published. LAA review URL and grade B supplied by the operator on 2026-11-17; vendor name corrected to "Statista, Inc." by the operator the same day; LAA page shows a WCAG Criteria Compliance score of 84% and an evaluation date of 02/23/2026. -->
 
 Resource name: Statista
 
 Source information last reviewed date: May 2026
 
-Vendor: Statista
+Vendor: Statista, Inc.
 
 Best known for: Statista is best known as a platform for discovering over 1,000,000 statistics from more than 22,500 sources on over 80,000 topics. Statista provides downloadable data, market outlooks, and company and brand reports, along with insights into industry trends and developments. These statistics are available as .XLS files but are also visualized and can be downloaded as PNG, JPEG, and PPT files. Statista has also begun packaging these statistics and visualizations into thematic reports, such as Industry & Market Reports or Company & Brand Reports, and Outlook reports, such as the Health Market Outlook and Digital Market Outlook reports. It also produces data-driven company and brand rankings in collaboration with major media outlets such as Forbes, the Financial Times, and TIME to identify industry leaders and benchmark performance.
 

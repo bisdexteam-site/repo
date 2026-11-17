@@ -72,7 +72,7 @@ Structure follows the BISdex site brief (operator, 2026-10-15). Page layouts are
 | `/` | Home / index | Intro band (h1); "Sources A to Z" with count; letter-grouped list of source names linking to source pages | `sources` collection |
 | `/sources/<slug>/` | Source page | Page top (breadcrumb, name, last reviewed); "On this page" links; Description; Alternatives; Content; AI Features; Use Cases; Accessibility; Reviews; FAQ; Cite this page | `sources`, `reviews`, `vendors` |
 | `/about/` | About | Intro band (h1, lead); What we cover; Our history | `pages/about.md` |
-| `/editorial-policy/` | Editorial Policy and Methodology | Intro band; sidebar "On this page"; Scope; Two kinds of content; Submitting a review; Reviewer guidelines; Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#grades`, with grade table); Independence | `pages/editorial-policy.md` |
+| `/editorial-policy/` | Editorial Policy and Methodology | Intro band; sidebar "On this page"; Scope; Two kinds of content; Submitting a review; Reviewer guidelines; Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#accessibility-grades`, with grade table); Independence | `pages/editorial-policy.md` |
 | `/disclaimer/` | Disclaimer | Intro band; Reviews are opinions; What editors verify; Editorial review; Source information; Accessibility grades; No endorsement; Trademarks; Privacy; External links | `pages/disclaimer.md` |
 | `404` | Page not found | Intro band ("Page not found"); one line with a link to the index | code |
 
@@ -356,7 +356,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 - [ ] **P4-T5 · About, Editorial Policy and Disclaimer pages**
   - Templates per DESIGN.md sections 6 to 8, including the Editorial Policy sidebar from h2s and the accessible grade table.
-  - **Done when:** all three render from `src/content/pages/`, and `/editorial-policy/#grades` lands on the grade section.
+  - **Done when:** all three render from `src/content/pages/`, and `/editorial-policy/#accessibility-grades` lands on the grade section.
   - *Depends on P2-T2, P3-T2.*
 
 ### Phase 5: Hardening
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q2 | Disclaimer copy (the brief's draft); About and Editorial Policy copy received 2026-10-19. Also: where the accessibility grade scale (`#grades`) goes, since the Editorial Policy copy has no grades section | Operator | P2-T2, P4-T5 |
+| Q2 | Disclaimer copy (the brief's draft); About and Editorial Policy copy received 2026-10-19. The grade scale is in the Editorial Policy's Accessibility grades section (`#accessibility-grades`), added 2026-11-17 | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource. Form options received 2026-11-16 (9.1); mapping published reviews to them is deferred (operator) | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
@@ -480,6 +480,8 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 | 2026-11-16 | BCC Research: the review's closing sentence on license terms is left out of the review and the handover file (operator approved the edit, since license-term data can't be stored); review date May 2023 (operator correction; first committed as August 2025); vendor "BCC Research, LLC"; "CB Insights (Industry Reports)" restructured as name + note "Industry Reports" (operator approved); the handover's "Partner content from:" list becomes one Content entry named "Partner content". (operator) |
 | 2026-11-16 | Accessibility has a third state, "Not yet graded": an LAA review exists but provides no score. `accessibility.grade` and `laaYear` are optional; a grade still needs `laaYear`. Added to DESIGN.md 5.5. (operator) |
 | 2026-11-17 | Statista: WCAG grade B (operator), LAA review https://www.libraryaccessibility.org/evaluation/statista, evaluated 2026-02-23 with a score of 84%, which matches B (83-86) on the grade scale. (operator) |
+| 2026-11-17 | Statista: vendor "Statista, Inc."; Alternatives restructuring approved ("Insider Intelligence" + note "formerly eMarketer"; RKMA Publications + note "budget friendly option", URL dropped). (operator) |
+| 2026-11-17 | Editorial Policy gains an "Accessibility grades" section before "Corrections and concerns", with the grade scale as an HTML table (caption, column headers, two score/grade pairs). Drafted by an agent at the operator's request, not editors' text. Grade links point to `#accessibility-grades` (the heading's generated anchor), replacing `#grades`. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -488,6 +490,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Editorial Policy Accessibility grades section with grade table; grade links now land on it; Statista vendor "Statista, Inc."; Statista alternatives approved · none
 - 2026-11-17 · operator request · Statista accessibility: grade B, LAA link, year 2026 · none
 - 2026-11-17 · P6-T3 · Statista source, review (2022-07) and vendor; handover saved; descriptor deviations added to 9.1 · vendor URL and LAA review URL are placeholders; LAA grade status unconfirmed; alternatives restructuring awaits operator approval
 - 2026-11-16 · operator request · Editorial Policy: "Who may submit" limited to librarians or information professionals; moderation step "Wording for legal risk" removed, list renumbered 1 to 5 (page and handover); "Updated" line changed to Nov 16, 2026 · none

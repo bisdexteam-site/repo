@@ -43,6 +43,32 @@ We apply the same standards to every review, whether it praises a resource or cr
 Declined and removed reviews
 If a review is declined or later removed, we will tell the reviewer why by email. Reviewers may revise and resubmit.
 We may remove a published review that we learn breaks this policy, for example one that turns out to be fake or to contain a false statement of fact.
+<!-- The Accessibility grades section below was drafted by an agent at the operator's request on 2026-11-17 and approved for publication; it is not editors' text. -->
+Accessibility grades
+
+Each source page shows a BISdex WCAG grade: a letter grade for how well the resource meets the Web Content Accessibility Guidelines (WCAG). Grades belong to the source information that BISdex editors maintain. They are never part of a review, and reviewers do not assign them.
+
+The editorial board assigns each grade from the WCAG Criteria Compliance score in the resource's Library Accessibility Alliance (LAA) evaluation, using the scale below. The source page links to that evaluation and gives its year.
+
+<div class="table-scroll" role="region" aria-labelledby="grade-scale-caption" tabindex="0">
+<table>
+<caption id="grade-scale-caption">BISdex WCAG grade scale</caption>
+<thead>
+<tr><th scope="col">LAA score</th><th scope="col">Grade</th><th scope="col">LAA score</th><th scope="col">Grade</th></tr>
+</thead>
+<tbody>
+<tr><td>97 to 100</td><td>A+</td><td>77 to 79</td><td>C+</td></tr>
+<tr><td>93 to 96</td><td>A</td><td>73 to 76</td><td>C</td></tr>
+<tr><td>90 to 92</td><td>A-</td><td>70 to 72</td><td>C-</td></tr>
+<tr><td>87 to 89</td><td>B+</td><td>67 to 69</td><td>D+</td></tr>
+<tr><td>83 to 86</td><td>B</td><td>65 to 66</td><td>D</td></tr>
+<tr><td>80 to 82</td><td>B-</td><td>Below 65</td><td>F</td></tr>
+</tbody>
+</table>
+</div>
+
+A source page shows "Not yet graded" when an LAA evaluation exists but does not provide a score, and "Not yet reviewed" when the LAA has not evaluated the resource. Editors review the grade when the LAA publishes a new evaluation.
+
 Corrections and concerns
 Anyone, including a vendor, may report a factual error. Moderators will review the report and respond. Vendors may correct factual errors in "About this resource" content by communicating changes via email.
 Disclaimer

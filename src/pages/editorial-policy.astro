@@ -100,6 +100,46 @@ const sections = headings.filter((heading) => heading.depth === 2);
     margin-top: var(--space-2);
   }
 
+  .text-page :global(.table-scroll) {
+    margin-top: var(--space-4);
+    overflow-x: auto;
+  }
+
+  .text-page :global(table) {
+    width: 100%;
+    min-width: 360px;
+    border-collapse: collapse;
+  }
+
+  .text-page :global(caption) {
+    padding-bottom: var(--space-2);
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .text-page :global(th) {
+    border-bottom: var(--rule-strong);
+    padding: var(--space-2) var(--space-3);
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .text-page :global(td) {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .text-page :global(tbody tr:nth-child(even)) {
+    background: var(--color-surface);
+  }
+
+  .text-page :global(:is(th, td):nth-child(3)) {
+    border-left: var(--rule-frame);
+  }
+
+  .text-page :global(.table-scroll + p) {
+    margin-top: var(--space-4);
+  }
+
   @media (max-width: 819px) {
     .policy__toc {
       flex-basis: 100%;
