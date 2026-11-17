@@ -73,7 +73,7 @@ Structure follows the BISdex site brief (operator, 2026-10-15). Page layouts are
 | `/sources/<slug>/` | Source page | Page top (breadcrumb, name, last reviewed); "On this page" links; Description; Alternatives; Content; AI Features; Use Cases; Accessibility; Reviews; FAQ; Cite this page | `sources`, `reviews`, `vendors` |
 | `/about/` | About | Intro band (h1, lead); What we cover; Our history | `pages/about.md` |
 | `/editorial-policy/` | Editorial Policy and Methodology | Intro band; sidebar "On this page"; Scope; Two kinds of content; Submitting a review; Reviewer guidelines; Moderation; Published reviews; Reviewer anonymity; Corrections; Relevancy ratings; Accessibility grades (`#accessibility-grades`, with grade table); Independence | `pages/editorial-policy.md` |
-| `/disclaimer/` | Disclaimer | Intro band; Reviews are opinions; What editors verify; Editorial review; Source information; Accessibility grades; No endorsement; Trademarks; Privacy; External links | `pages/disclaimer.md` |
+| `/disclaimer/` | Disclaimer | Intro band; About this information; Reviews are opinions; No endorsement; Accessibility grades; Trademarks; External links; Privacy | `pages/disclaimer.md` |
 | `404` | Page not found | Intro band ("Page not found"); one line with a link to the index | code |
 
 There is no Relevancy section on source pages. Relevancy ratings appear on each review (operator, 2026-10-15).
@@ -314,7 +314,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - Review: date `2022-07`; descriptor and relevancy from the handover. No Use Cases section.
   - *Depends on P1-T1.*
 
-- [ ] **P2-T2 · About, Editorial Policy and Disclaimer copy**
+- [x] **P2-T2 · About, Editorial Policy and Disclaimer copy**
   - Follow 5.6 with the brief's drafts, into `src/content/pages/`. The grade table goes in the Editorial Policy body as a Markdown table under the "Accessibility grades" heading.
   - **Done when:** all three files build, with headings matching section 4.
   - *Depends on P1-T1. Needs Q2.*
@@ -354,7 +354,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
   - **Done when:** the generated citation matches the APA 7 pattern in DESIGN.md 5.8, and the button works by keyboard and is absent without JavaScript.
   - *Depends on P4-T2.*
 
-- [ ] **P4-T5 · About, Editorial Policy and Disclaimer pages**
+- [x] **P4-T5 · About, Editorial Policy and Disclaimer pages**
   - Templates per DESIGN.md sections 6 to 8, including the Editorial Policy sidebar from h2s and the accessible grade table.
   - **Done when:** all three render from `src/content/pages/`, and `/editorial-policy/#accessibility-grades` lands on the grade section.
   - *Depends on P2-T2, P3-T2.*
@@ -405,7 +405,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 | # | Question | Who answers | Blocks |
 | --- | --- | --- | --- |
-| Q2 | Disclaimer copy (the brief's draft); About and Editorial Policy copy received 2026-10-19. The grade scale is in the Editorial Policy's Accessibility grades section (`#accessibility-grades`), added 2026-11-17 | Operator | P2-T2, P4-T5 |
+| Q2 | Disclaimer, About and Editorial Policy copy all received (Disclaimer 2026-11-17). The grade scale is in the Editorial Policy's Accessibility grades section (`#accessibility-grades`), added 2026-11-17 | Operator | P2-T2, P4-T5 |
 | Q3 | Exact Google Form dropdown values for role, institution type, experience and relationship to the resource. Form options received 2026-11-16 (9.1); mapping published reviews to them is deferred (operator) | Operator | Finishing P1-T1 |
 | Q4 | The Worker's `workers.dev` address | Operator (after P0-T3) | Canonical URLs and citations; not the build |
 | Q5 | Logo as SVG | Operator | Final header; a typeset wordmark stands in |
@@ -490,6 +490,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · P2-T2, P4-T5 · Disclaimer copy (handover saved) and /disclaimer/ page; footer disclaimer link now resolves; About, Editorial Policy and Disclaimer all done · operator may confirm wording with the RUSA office before launch
 - 2026-11-17 · operator request · Editorial Policy Accessibility grades section with grade table; grade links now land on it; Statista vendor "Statista, Inc."; Statista alternatives approved · none
 - 2026-11-17 · operator request · Statista accessibility: grade B, LAA link, year 2026 · none
 - 2026-11-17 · P6-T3 · Statista source, review (2022-07) and vendor; handover saved; descriptor deviations added to 9.1 · vendor URL and LAA review URL are placeholders; LAA grade status unconfirmed; alternatives restructuring awaits operator approval

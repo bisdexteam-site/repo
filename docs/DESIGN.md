@@ -297,7 +297,7 @@ Copy follows the brief's Editorial Policy draft.
 
 ## 8. Page: Disclaimer
 
-Same template as About (intro band with h1, single 720px column). Sections: Reviews are opinions; What editors verify; Editorial review; Source information; Accessibility grades; No endorsement; Trademarks; Privacy; External links. Linked from the footer on every page. Copy follows the brief's Disclaimer draft.
+Same template as About (intro band with h1, single 720px column, no lead paragraph). Sections, each an uppercase h2: About this information; Reviews are opinions; No endorsement; Accessibility grades; Trademarks; External links; Privacy (links to Reviewer privacy in the Editorial Policy). Moderation and verification are covered in the Editorial Policy rather than repeated here. Linked from the footer on every page.
 
 ---
 
