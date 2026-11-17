@@ -1,4 +1,4 @@
-<!-- Editors' text for Statista, attached by the operator on 2026-11-17. Verbatim; style-guide instructions under each heading left out; not published. -->
+<!-- Editors' text for Statista, attached by the operator on 2026-11-17. Verbatim; style-guide instructions under each heading left out; not published. LAA review URL and grade B supplied by the operator on 2026-11-17; LAA page shows a WCAG Criteria Compliance score of 84% and an evaluation date of 02/23/2026. -->
 
 Resource name: Statista
 

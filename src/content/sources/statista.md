@@ -38,5 +38,7 @@ aiFeatures: >-
   of AI to summarize results in the sidebar, and allows the user to "continue
   in Research AI Chat.”
 accessibility:
-  laaUrl: "[LAA review URL]"
+  grade: B
+  laaUrl: https://www.libraryaccessibility.org/evaluation/statista
+  laaYear: 2026
 ---

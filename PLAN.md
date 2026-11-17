@@ -479,6 +479,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 | 2026-10-19 | Editorial Policy copy comes from the editors' handover ("BISdex Editorial Policy", updated Oct 19, 2026), with its own eleven sections. It replaces the Editorial Policy sections listed in DESIGN.md section 7 and section 4. The "Updated" line is the intro band lead; the sidebar lists the page's h2s. (operator) |
 | 2026-11-16 | BCC Research: the review's closing sentence on license terms is left out of the review and the handover file (operator approved the edit, since license-term data can't be stored); review date May 2023 (operator correction; first committed as August 2025); vendor "BCC Research, LLC"; "CB Insights (Industry Reports)" restructured as name + note "Industry Reports" (operator approved); the handover's "Partner content from:" list becomes one Content entry named "Partner content". (operator) |
 | 2026-11-16 | Accessibility has a third state, "Not yet graded": an LAA review exists but provides no score. `accessibility.grade` and `laaYear` are optional; a grade still needs `laaYear`. Added to DESIGN.md 5.5. (operator) |
+| 2026-11-17 | Statista: WCAG grade B (operator), LAA review https://www.libraryaccessibility.org/evaluation/statista, evaluated 2026-02-23 with a score of 84%, which matches B (83-86) on the grade scale. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
 
 ---
@@ -487,6 +488,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Statista accessibility: grade B, LAA link, year 2026 · none
 - 2026-11-17 · P6-T3 · Statista source, review (2022-07) and vendor; handover saved; descriptor deviations added to 9.1 · vendor URL and LAA review URL are placeholders; LAA grade status unconfirmed; alternatives restructuring awaits operator approval
 - 2026-11-16 · operator request · Editorial Policy: "Who may submit" limited to librarians or information professionals; moderation step "Wording for legal risk" removed, list renumbered 1 to 5 (page and handover); "Updated" line changed to Nov 16, 2026 · none
 - 2026-11-16 · operator request · review form options recorded and descriptor deviations listed in 9.1 · mapping deferred; each new review's deviations get added to 9.1
