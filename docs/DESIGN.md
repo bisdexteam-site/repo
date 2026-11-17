@@ -9,7 +9,7 @@ This spec describes how the new BISdex site should look and behave. It follows t
 
 **Changes from 0.2:** no one-line summary under the source page title; the Description section covers it (5.1, 5.4).
 
-**Changes from 0.3:** the home intro splits into a centered h1 and a "By and for librarians" ribbon above it; the home intro line drops to 42px (2.2, 3.3, 4).
+**Changes from 0.3:** the home intro splits into a centered h1 and a "By and for librarians" ribbon above it; the home intro line drops to 42px, page titles drop to 56px (source) and 48px (text pages), and every intro band shares the same padding (2.2, 2.4, 3.3, 4).
 
 ---
 
@@ -69,8 +69,8 @@ Type scale (desktop; see 2.4 for mobile):
 | Wordmark "BISdex" | Heading | 700 | 44px / 1 | +0.5px | Primary + logo gray |
 | Wordmark subtitle | Heading | 500 | 15px | Uppercase, +1.2px | Secondary |
 | Main nav | Heading | 600 | 20px | Uppercase, +0.4px | Primary |
-| Page title (source) | Heading | 700 | 64px / 1 | none | Primary |
-| Page title (text pages) | Heading | 700 | 56px / 1.05 | none | Primary |
+| Page title (source) | Heading | 700 | 56px / 1 | none | Primary |
+| Page title (text pages) | Heading | 700 | 48px / 1.05 | none | Primary |
 | Home intro line | Heading | 600 | 42px / 1.12 | none | Primary |
 | Section heading (h2) | Heading | 700 | 26 to 28px / 1.2 | Uppercase, +0.6px | Primary |
 | Sub-heading (h3) | Body | 700 | 18px | none | Text |
@@ -110,7 +110,7 @@ Rules:
 - Layout is fluid and built with flex-wrap and CSS grid, so it reflows without hard breakpoints. Reference widths:
   - **Wide (1024px and up):** source page sections use a two-column layout (heading column 200 to 240px, content column).
   - **Narrow (below about 820px):** section headings stack above their content; the Editorial sidebar stacks above the article; index columns collapse to one.
-- Mobile type: page titles scale down to about 44px, home intro to about 32px, section headings to 24px (use `clamp()`).
+- Mobile type: source titles scale down to about 40px, text page titles to about 38px, home intro to about 32px, section headings to 24px (use `clamp()`).
 - No horizontal page scroll at 320px. Wide tables scroll inside their own box.
 
 ---
@@ -132,7 +132,7 @@ First focusable element on every page: "Skip to main content", visually hidden u
 
 ### 3.3 Intro band
 
-Full-width `--color-surface` band under the header holding the page h1 (and, on About, the lead paragraph). Bottom hairline rule.
+Full-width `--color-surface` band under the header holding the page h1 (and, on About and Editorial Policy, the lead paragraph). Bottom hairline rule. Every intro band, Home included, uses the same padding: 64px above, 48px below. Titles are left-aligned on every page except Home.
 
 On Home only, a **ribbon** sits between the header and the band: a full-width `--color-primary` strip with one centered line of white text, set in the main nav style (heading font 600, 20px, uppercase, +0.4px), 12px vertical padding. The home band centers its h1 (max width 860px).
 

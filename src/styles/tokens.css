@@ -27,8 +27,12 @@
   --text-wordmark: 2.75rem; /* 44px */
   --text-wordmark-subtitle: 0.9375rem; /* 15px */
   --text-nav: 1.25rem; /* 20px */
-  --text-title-source: clamp(2.75rem, 2.07rem + 3.01vw, 4rem); /* 44 to 64px */
-  --text-title-page: clamp(2.75rem, 2.34rem + 1.81vw, 3.5rem); /* 44 to 56px */
+  --text-title-source: clamp(
+    2.5rem,
+    1.958rem + 2.41vw,
+    3.5rem
+  ); /* 40 to 56px */
+  --text-title-page: clamp(2.375rem, 2.036rem + 1.506vw, 3rem); /* 38 to 48px */
   --text-intro: clamp(2rem, 1.7rem + 1.35vw, 2.625rem); /* 32 to 42px */
   --text-h2: clamp(1.5rem, 1.36rem + 0.6vw, 1.75rem); /* 24 to 28px */
   --text-h3: 1.125rem; /* 18px */
