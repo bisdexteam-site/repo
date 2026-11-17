@@ -7,3 +7,6 @@
 - id: bcc-research
   name: BCC Research, LLC
   url: "[Vendor URL]"
+- id: statista
+  name: Statista
+  url: "[Vendor URL]"

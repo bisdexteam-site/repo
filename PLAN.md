@@ -3,7 +3,7 @@
 A static Astro site for BISdex (Business Information Sources Index), edited by the BISdex editorial team through files in this repo and hosted on Cloudflare Workers.
 
 - **Readers:** coding agents (Claude Code) who carry out the tasks, and the human operator who reviews their work.
-- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done, plus the About and Editorial Policy pages: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). BCC Research added 2026-11-16 (P6-T2). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
+- **Status:** 2026-10-19. Phase 0 (except P0-T3), P2-T1, P3, and P4-T1 to P4-T3 done, plus the About and Editorial Policy pages: the home index and the full IBISWorld page (minus Cite this page) are live. P1-T1 waits on Q3. Next: P4-T4 (agent); finish P0-T3 (operator: Worker name, preview builds). BCC Research added 2026-11-16 (P6-T2); Statista added 2026-11-17 (P6-T3). Waiting on the operator for the inputs in section 9 (page copy, reviewer descriptor values).
 - **How to use this file:** read sections 1 to 6 once, then work one task from section 8 per session.
 
 ---
@@ -380,7 +380,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 
 - [x] **P6-T1 · Second launch source** (Q6): FactSet
 - [x] **P6-T2 · Third launch source** (Q6): BCC Research
-- [ ] **P6-T3 · Fourth launch source** (Q6)
+- [x] **P6-T3 · Fourth launch source** (Q6): Statista
   - Each: follow 5.6, add the vendor if new, and link alternatives that now exist in BISdex.
   - **Done when:** the source builds and appears in the index.
   - *Depends on P2-T1; can run any time after it.*
@@ -441,6 +441,10 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 | bcc-research/2023-05-1 | institutionType | doctoral research university | Doctoral research university (R1 or R2) | R1/R2 not confirmed |
 | bcc-research/2023-05-1 | experience | 10+ years of experience | none | Form measures skill level, not years |
 | bcc-research/2023-05-1 | relationship | evaluator/selector | Evaluator / Selector | Wording only |
+| statista/2022-07-1 | role | Business librarian | Business librarian or business subject liaison | Wording only |
+| statista/2022-07-1 | institutionType | doctoral research university | Doctoral research university (R1 or R2) | R1/R2 not confirmed |
+| statista/2022-07-1 | experience | 10+ years of experience | none | Form measures skill level, not years |
+| statista/2022-07-1 | relationship | evaluator/selector | Evaluator / Selector | Wording only |
 
 ---
 
@@ -483,6 +487,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · P6-T3 · Statista source, review (2022-07) and vendor; handover saved; descriptor deviations added to 9.1 · vendor URL and LAA review URL are placeholders; LAA grade status unconfirmed; alternatives restructuring awaits operator approval
 - 2026-11-16 · operator request · Editorial Policy: "Who may submit" limited to librarians or information professionals; moderation step "Wording for legal risk" removed, list renumbered 1 to 5 (page and handover); "Updated" line changed to Nov 16, 2026 · none
 - 2026-11-16 · operator request · review form options recorded and descriptor deviations listed in 9.1 · mapping deferred; each new review's deviations get added to 9.1
 - 2026-11-16 · operator request · BCC Research review date corrected to 2023-05 (file renamed); vendor name "BCC Research, LLC"; Alternatives restructuring approved · vendor URL and LAA review year still needed
