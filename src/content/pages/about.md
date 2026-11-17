@@ -1,6 +1,6 @@
 ---
 title: "About BISdex"
-lead: "BISdex reviews information sources for business information professionals. Think of it as Wirecutter for business research: instead of consumer products, we evaluate databases and datasets. Each review gives you the essentials up front, so you can quickly decide whether a source deserves a closer look."
+lead: "BISdex reviews information sources for business information professionals. Think of it as [*Wirecutter*](https://www.nytimes.com/wirecutter/) for business research. Instead of consumer products, BISdex evaluates databases and datasets. Each review gives you the essentials up front, so you can quickly decide whether a source deserves a closer look."
 ---
 
 ## What we cover

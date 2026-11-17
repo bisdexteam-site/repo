@@ -1,4 +1,6 @@
 ---
+import { renderInline } from "@/lib/markdown";
+
 /**
  * Full-width band under the header holding the page h1 and an optional
  * lead paragraph. An optional ribbon line sits in a primary strip above it.
@@ -6,6 +8,7 @@
 
 interface Props {
   title: string;
+  /** Inline Markdown (emphasis, links). */
   lead?: string;
   /** Short line shown in a primary-colored strip above the band. */
   ribbon?: string;
@@ -27,7 +30,7 @@ const { title, lead, ribbon, size = "page" } = Astro.props;
       <h1 class:list={["intro-band__title", `intro-band__title--${size}`]}>
         {title}
       </h1>
-      {lead && <p class="intro-band__lead">{lead}</p>}
+      {lead && <p class="intro-band__lead" set:html={renderInline(lead)} />}
     </div>
   </div>
 </div>

@@ -83,7 +83,7 @@ Rules:
 
 - One h1 per page. Headings never skip a level.
 - Body copy line length stays at or under about 75 characters (`max-width: 720px` to `780px`).
-- Italics are used for titles in APA citations only.
+- Italics are used only for titles of works: in APA citations and for publication names in prose (for example *Wirecutter* on About).
 
 ### 2.3 Spacing, shape, and lines
 
