@@ -412,7 +412,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | Q6 | The other three launch sources and their handover text | Editors | Phase 6 |
 | Q7 | Web Analytics beacon token (Web Analytics > Add a site, hostname = the `workers.dev` address, then the token from the snippet under Manage site) | Operator | P7-T1 |
 | Q8 | Editorial Policy section explaining reviewers' relevancy ratings (the three audiences and what Low, Average and High mean). Operator will circle back | Operator | Nothing; the ratings already display on reviews |
-| Q9 | How a published vendor response looks on a source page (the Editorial Policy now allows them; no design or content field exists yet). Also: does the review form still ask about AI use, now that AI copyediting needs no disclosure? | Operator | Nothing until a vendor responds |
+| Q9 | How a published vendor response looks on a source page (the Editorial Policy now allows them; no design or content field exists yet). | Operator | Nothing until a vendor responds |
 
 
 ### 9.1 Reviewer descriptors: form options and deviations
@@ -492,6 +492,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Editorial Policy: generative AI section restored to its bulleted form, adding that copyediting-only AI use needs no disclosure and that reviews are held to librarians' research integrity standards · none
 - 2026-11-17 · operator request · Editorial Policy: date now "Updated November 2026"; conflicts cover former employees and competitors; no incentives; vendor responses reviewed by editors; new Updating a review section; AI limited to copyediting with no disclosure needed · Q9
 - 2026-11-17 · operator request · Statista AI Features copyedited by the operator's direction, with a link to Statista Research AI · none
 - 2026-11-17 · operator request · Editorial Policy audit edits: Disclaimer section now links to /disclaimer/; "Verified by BISdex editors" defined; spelling-and-formatting rule clarified; descriptor example matches the site; corrections wording uses "source information" · relevancy ratings section (Q8); "Updated" date wording pending operator

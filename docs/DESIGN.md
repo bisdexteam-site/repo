@@ -255,7 +255,7 @@ Grades follow the GPA-style table in Section 7. The editorial board assigns them
   2. Date (`<time>`), "Month Year".
   3. Relevancy ratings (5.6).
   4. Review text, prose, as approved (up to 500 words). Moderators may correct spelling and formatting before publication; never edited after.
-  5. Disclosures, only when relevant, 15px secondary, prefixed with bold "Disclosure:". For example, a relationship with the vendor that a reader would want to know about.
+  5. Disclosures, only when relevant, 15px secondary, prefixed with bold "Disclosure:". For example, AI use (with the reviewer's description of how AI tools were used) or a relationship with the vendor that a reader would want to know about.
 - Reviewer name and institution are never shown.
 - Reviews are not styled as cards with colored side borders; separation is by rules and spacing.
 

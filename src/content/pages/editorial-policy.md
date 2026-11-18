@@ -30,11 +30,13 @@ We encourage specific examples, such as a research task the resource handled wel
 
 ## Use of generative AI
 
-You may use generative AI tools to copyedit a review, for example to fix grammar, spelling, or clarity. You may not use them to write it. The experience, observations, and opinions must be your own, in your own words.
+You may use generative AI tools to help organize or polish a review, as long as the experience and opinions are your own.
 
-You do not need to disclose AI used only for copyediting. Every review is held to the standards of research integrity expected of librarians: accurate, honest, and based on your own use of the resource.
+- Tell us on the submission form if you used an AI tool and how. You do not need to disclose AI used only for copyediting.
+- Revise any AI-assisted text so it reflects what you actually observed, in your own words.
+- AI-assisted reviews meet the same standards as every other review.
 
-Reviews written by AI, or describing experiences the reviewer did not have, will be rejected.
+Every review is held to the standards of research integrity expected of librarians. Reviews written mainly by AI, or describing experiences the reviewer did not have, will be rejected.
 
 ## How reviews are moderated
 
