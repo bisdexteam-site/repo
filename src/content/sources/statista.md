@@ -4,7 +4,7 @@ lastReviewed: "2026-05"
 vendor: statista
 bestKnownFor: >-
   Statista is an aggregator of over 1 million statistics from more than 50,000
-  sources on over 80,000 topics. Statista
+  sources on over 80,000 topics. It
   provides downloadable data, market outlooks, and company and brand reports,
   along with insights into industry trends and developments. These statistics
   are available as .XLS files but are also visualized and can be downloaded as
