@@ -494,6 +494,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · IBISWorld Content links removed; Statista alternative renamed "EMARKETER (formerly Insider Intelligence)" · FactSet Description still says Insider Intelligence (asked operator)
 - 2026-11-17 · operator request · Statista Best known for: second sentence opens "It provides" · none
 - 2026-11-17 · operator request · Statista Best known for: opening sentence reworded, sources now 50,000+ (operator figure) · none
 - 2026-11-17 · operator request · Source page audit: Alternatives notes removed on all sources; Mergent Online removed (sunsetted); BCC Research partner content reworded; FactSet Osiris comparison moved into its review; IBISWorld 40+ countries, call prep sentence shortened, five alternatives parked in docs/parked-content.md · operator to supply Content item links

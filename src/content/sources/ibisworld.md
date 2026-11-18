@@ -21,15 +21,11 @@ content:
   - name: Industry Reports
     description: global, country-specific, and for the U.S. and Candata state/provincial-specific
   - name: U.S. Specialized Industry Reports
-    url: https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports
     description: Sub-NAICS-level reports
   - name: U.S. State Industry Reports
-    url: https://www.ibisworld.com/united-states/list-of-industries/states-all/
   - name: Specialized Industry Reports
-    url: https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports
     description: for industries outside the scope of the Census
   - name: Spotlight Industry Reports
-    url: https://www.ibisworld.com/united-states/list-of-industries/#specialized-reports
     description: previously on-demand (OD) reports, now a collection of 300+ reports
   - name: Premium US Industry Wizard
     description: lets you screen report-level data and export

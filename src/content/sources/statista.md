@@ -16,7 +16,7 @@ bestKnownFor: >-
   Forbes, the Financial Times, and TIME to identify industry leaders and
   benchmark performance.
 alternatives:
-  - name: Insider Intelligence
+  - name: EMARKETER (formerly Insider Intelligence)
   - name: Passport
   - name: Mintel
   - name: Data Planet
