@@ -1,9 +1,9 @@
 ---
 /**
- * A reviewer's relevancy ratings: one row per audience they rated, each with
- * a three-segment meter and the rating in words. The words carry the
- * meaning; the meter is hidden from assistive technology. A short note
- * under the heading links to the Editorial Policy's explanation.
+ * A reviewer's relevancy ratings, sized for the review panel: one row per
+ * audience they rated, each with a small three-segment meter and the rating
+ * in words. The words carry the meaning; the meter is hidden from assistive
+ * technology. A link explains the ratings in the Editorial Policy.
  */
 
 type Level = "Low" | "Average" | "High";
@@ -20,7 +20,7 @@ const { headingLevel = "h4", ...ratings } = Astro.props;
 const audiences = [
   { key: "researchers", label: "Researchers" },
   { key: "teaching", label: "Teaching / Students" },
-  { key: "commercial", label: "Commercial / Industry / Entrepreneurs" },
+  { key: "commercial", label: "Commercial / Industry" },
 ] as const;
 
 const filled: Record<Level, number> = { Low: 1, Average: 2, High: 3 };
@@ -33,11 +33,7 @@ const Heading = headingLevel;
 
 {rows.length > 0 && (
   <div class="relevancy">
-    <Heading class="relevancy__heading">Reviewer's relevancy ratings</Heading>
-    <p class="relevancy__note">
-      Anecdotal, based on this reviewer's experience.
-      <a href="/editorial-policy/#relevancy-ratings">What these ratings mean</a>
-    </p>
+    <Heading class="relevancy__heading">Relevancy (anecdotal)</Heading>
     <dl class="relevancy__rows">
       {rows.map((row) => (
         <div class="relevancy__row">
@@ -58,54 +54,57 @@ const Heading = headingLevel;
         </div>
       ))}
     </dl>
+    <p class="relevancy__link">
+      <a href="/editorial-policy/#relevancy-ratings">What these mean</a>
+    </p>
   </div>
 )}
 
 <style>
+  .relevancy {
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
   .relevancy__heading {
+    margin: 0;
     color: var(--color-text-secondary);
     font-family: var(--font-heading);
-    font-size: var(--text-eyebrow);
+    font-size: 0.8125rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-transform: uppercase;
   }
 
-  .relevancy__note {
-    margin-top: var(--space-1);
-    color: var(--color-text-secondary);
-    font-size: var(--text-small);
-  }
-
   .relevancy__rows {
-    margin-top: var(--space-2);
+    margin: var(--space-2) 0 var(--space-1);
   }
 
   .relevancy__row {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-1) var(--space-4);
-    max-width: 560px;
-    padding-block: var(--space-1);
-    font-size: var(--text-small);
+    gap: var(--space-2);
+    padding-block: 3px;
+    font-size: 0.875rem;
   }
 
   .relevancy__row dd {
     display: flex;
     align-items: center;
-    gap: var(--space-3);
+    gap: var(--space-2);
+    margin: 0;
   }
 
   .relevancy__meter {
     display: flex;
-    gap: var(--space-1);
+    gap: 3px;
   }
 
   .relevancy__segment {
-    width: 34px;
-    height: 10px;
+    width: 18px;
+    height: 8px;
     background: var(--color-rule);
   }
 
@@ -114,8 +113,13 @@ const Heading = headingLevel;
   }
 
   .relevancy__level {
-    min-width: 4.5em;
+    min-width: 4.2em;
     color: var(--color-primary);
     font-weight: 700;
+  }
+
+  .relevancy__link {
+    margin: 0;
+    font-size: 0.875rem;
   }
 </style>

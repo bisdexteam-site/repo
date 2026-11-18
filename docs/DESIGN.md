@@ -241,21 +241,20 @@ Grades follow the GPA-style table in Section 7. The editorial board assigns them
 ### 5.6 Relevancy ratings (inside each review)
 
 - Relevancy belongs to the individual reviewer. It is shown inside each review item, never as a source-level section, and never combined across reviews.
-- Up to three rows, in this fixed order: Researchers; Teaching / Students; Commercial / Industry / Entrepreneurs. Audiences the reviewer didn't rate are left out; if none were rated, the block is omitted.
-- Each row: audience label, a three-segment meter (34 x 10px segments, filled primary or empty `--color-rule`), and the text label (Low, Average, High) in bold primary.
+- Shown in the review panel (5.7), under the badge, above a 1px `--color-border-subtle` rule.
+- Small uppercase heading: "Relevancy (anecdotal)".
+- Up to three rows, in this fixed order: Researchers; Teaching / Students; Commercial / Industry. Audiences the reviewer didn't rate are left out; if none were rated, the block is omitted.
+- Each row (14px): audience label, a three-segment meter (18 x 8px segments, filled primary or empty `--color-rule`), and the text label (Low, Average, High) in bold primary.
 - The meter is `aria-hidden`; the text label carries the meaning.
-- Small heading above the rows: "Reviewer's relevancy ratings", followed by a one-line note in small secondary text: "Anecdotal, based on this reviewer's experience. What these ratings mean" (the last four words link to the Editorial Policy, `#relevancy-ratings`).
+- Below the rows, a small link "What these mean" to the Editorial Policy (`#relevancy-ratings`).
 
 ### 5.7 Reviews section
 
 - Heading column shows the h2 plus "[N] published reviews · newest first".
 - **Call-to-action panel** (surface background, 4px radius): primary "Leave a review" button linking to the Google Form (`https://forms.gle/JkQis9eyVQNvtebw9`, new tab), with the note: "Reviews are submitted through Google Forms. Contact information is used only for verification and is never published." The button appears from launch.
-- **Review item** (`<article>`), newest first, hairline between items:
-  1. Reviewer descriptor (15px secondary), built from the fixed fields joined with " · ": role, institution type, experience, relationship to resource, then the badge "✓ Verified by BISdex editors" in primary semibold with the check icon.
-  2. Date (`<time>`), "Month Year".
-  3. Relevancy ratings (5.6).
-  4. Review text, prose, as approved (up to 500 words). Moderators may correct spelling and formatting before publication; never edited after.
-  5. Disclosures, only when relevant, 15px secondary, prefixed with bold "Disclosure:". For example, AI use (with the reviewer's description of how AI tools were used) or a relationship with the vendor that a reader would want to know about.
+- **Review item** (`<article>`, with a visually hidden h3 "Review from [Month Year]"), newest first, hairline between items. Two columns that stack on narrow screens:
+  - **Review panel** (240 to 260px, `--color-surface`, 4px radius, 16px padding): a definition list with small uppercase labels and 16px values: Reviewer (role), Institution (institution type), Experience, Relationship (to the resource), Reviewed (`<time>`, "Month Year"). Values show the stored form value with its first letter capitalized. Then the badge "✓ Verified by BISdex editors" in primary semibold with the check icon, then the relevancy ratings (5.6).
+  - **Review column:** the review text, prose, as approved (up to 500 words). Moderators may correct spelling and formatting before publication; never edited after. Then disclosures, only when relevant, 15px secondary, prefixed with bold "Disclosure:". For example, AI use (with the reviewer's description of how AI tools were used) or a relationship with the vendor that a reader would want to know about.
 - Reviewer name and institution are never shown.
 - Reviews are not styled as cards with colored side borders; separation is by rules and spacing.
 
@@ -319,7 +318,7 @@ Same template as About (intro band with h1, single 720px column, no lead paragra
 
 - Dates display as "Month Year" (for example "June 2026").
 - APA 7 for all citations.
-- Reviewer descriptors use only the fixed dropdown values from the review form, separated by " · ". No free text.
+- Reviewer details use only the fixed dropdown values from the review form, shown as labeled fields in the review panel (5.7). No free text.
 - Placeholders in brackets appear only during the build; production pages never show bracketed text.
 - No em dashes in site copy.
 - Sunsetted (discontinued) products are not listed anywhere on the site, including Alternatives.
