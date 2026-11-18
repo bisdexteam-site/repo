@@ -495,6 +495,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Statista Best known for: semicolon before "providing" now a comma · none
 - 2026-11-17 · operator request · Statista Best known for revised (dated thematic-reports sentence removed); all four sources last reviewed November 2026; FactSet Description says EMARKETER · none
 - 2026-11-17 · operator request · Design canvas page mockups (Home, IBISWorld, About, Editorial Policy, Disclaimer) regenerated from live content and styles · Look and feel board still shows the old title sizes
 - 2026-11-17 · operator request · IBISWorld Content links removed; Statista alternative renamed "EMARKETER (formerly Insider Intelligence)" · FactSet Description still says Insider Intelligence (asked operator)
