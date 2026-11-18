@@ -485,7 +485,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 | 2026-11-17 | Statista: vendor "Statista, Inc."; Alternatives restructuring approved ("Insider Intelligence" + note "formerly eMarketer"; RKMA Publications + note "budget friendly option", URL dropped). (operator) |
 | 2026-11-17 | Editorial Policy gains an "Accessibility grades" section before "Corrections and concerns", with the grade scale as an HTML table (caption, column headers, two score/grade pairs). Drafted by an agent at the operator's request, not editors' text. Grade links point to `#accessibility-grades` (the heading's generated anchor), replacing `#grades`. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
-| 2026-11-17 | The four launch reviews are beta content from the same reviewer as their source text. For this build cycle only, the operator may move that reviewer's text between Description and the review; this is an exception to the never-edit rule for reviews. (operator) |
+| 2026-11-17 | The four launch reviews are beta content from the same reviewer as their source text. Until launch (P7-T4), the operator may move that reviewer's text between Description and the review; this is an exception to the never-edit rule for reviews. From launch on, the never-edit rule applies with no exceptions. (operator) |
 | 2026-11-17 | Alternatives are names only (link or "Not yet in BISdex"); sunsetted products are not listed; partner content is one "Partner content" item. (operator) |
 
 ---
@@ -494,6 +494,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Decision log: beta-review edit exception ends at launch · none
 - 2026-11-17 · operator request · Editorial Policy Reviewer privacy: descriptor example dropped · none
 - 2026-11-17 · operator request · Review layout B3: reviewer panel beside the text with labeled details, badge and compact relevancy ratings · none
 - 2026-11-17 · operator request · Editorial Policy Relevancy ratings section (audiences and scale); note under each review's ratings links to it; Q8 answered · none
