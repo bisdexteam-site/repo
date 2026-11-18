@@ -1,20 +1,16 @@
 ---
 name: Statista
-lastReviewed: "2026-05"
+lastReviewed: "2026-11"
 vendor: statista
 bestKnownFor: >-
   Statista is an aggregator of over 1 million statistics from more than 50,000
-  sources on over 80,000 topics. It
-  provides downloadable data, market outlooks, and company and brand reports,
-  along with insights into industry trends and developments. These statistics
-  are available as .XLS files but are also visualized and can be downloaded as
-  PNG, JPEG, and PPT files. Statista has also begun packaging these statistics
-  and visualizations into thematic reports, such as Industry & Market Reports
-  or Company & Brand Reports, and Outlook reports, such as the Health Market
-  Outlook and Digital Market Outlook reports. It also produces data-driven
-  company and brand rankings in collaboration with major media outlets such as
-  Forbes, the Financial Times, and TIME to identify industry leaders and
-  benchmark performance.
+  sources on over 80,000 topics; providing downloadable data, market outlooks,
+  and company and brand reports, along with insights into industry trends and
+  developments. Statistics are available as .XLS files but are also visualized
+  and can be downloaded as PNG, JPEG, and PPT files. Statista also produces
+  data-driven company and brand rankings in collaboration with major media
+  outlets such as Forbes, the Financial Times, and TIME to identify industry
+  leaders and benchmark performance.
 alternatives:
   - name: EMARKETER (formerly Insider Intelligence)
   - name: Passport

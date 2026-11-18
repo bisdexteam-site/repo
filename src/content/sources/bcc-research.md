@@ -1,6 +1,6 @@
 ---
 name: BCC Research
-lastReviewed: "2025-08"
+lastReviewed: "2026-11"
 vendor: bcc-research
 bestKnownFor: >-
   BCC Research is a long standing publisher of in-depth market reports,

@@ -1,9 +1,9 @@
 ---
 name: FactSet
-lastReviewed: "2024-07"
+lastReviewed: "2026-11"
 vendor: factset
 bestKnownFor: |-
-  FactSet has been a leading provider of accurate financial information since 1978. Similar to Bloomberg and Capital IQ, FactSet is considered a major forecast data provider in the financial sector. With notable partnerships like Crunchbase for private company intelligence and Insider Intelligence for advertising spending, FactSet combines data and text from multiple information providers (800+ sources) into a single online source of information, news, and analytics.
+  FactSet has been a leading provider of accurate financial information since 1978. Similar to Bloomberg and Capital IQ, FactSet is considered a major forecast data provider in the financial sector. With notable partnerships like Crunchbase for private company intelligence and EMARKETER for advertising spending, FactSet combines data and text from multiple information providers (800+ sources) into a single online source of information, news, and analytics.
 
   FactSet powers the investment community, so exposure to FactSet is helpful for students to learn how to:
 

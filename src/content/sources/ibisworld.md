@@ -1,6 +1,6 @@
 ---
 name: IBISWorld
-lastReviewed: "2026-05"
+lastReviewed: "2026-11"
 vendor: ibisworld
 bestKnownFor: >-
   IBISWorld contains industry reports written by in-house analysts for a wide
