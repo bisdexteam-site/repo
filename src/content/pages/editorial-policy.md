@@ -52,6 +52,20 @@ Reviews marked "Verified by BISdex editors" have been through this process: edit
 
 Before a review is published, moderators may correct spelling and formatting. They do not change the reviewer's wording, meaning, or assessment, and they do not edit a review once it is published.
 
+## Relevancy ratings
+
+Reviewers may rate how relevant a resource is to three groups of users. Ratings are anecdotal: they reflect one reviewer's experience at their own institution, not a measurement or a BISdex assessment.
+
+- **Researchers:** faculty, doctoral students, and others doing scholarly research
+- **Teaching / Students:** instruction, coursework, and student assignments
+- **Commercial / Industry / Entrepreneurs:** practitioners, business owners, and job seekers
+
+Each group is rated on a three-point scale:
+
+- **High:** a go-to resource for this group's typical needs
+- **Average:** useful for some of this group's needs, usually alongside other resources
+- **Low:** rarely the best fit for this group
+
 ## Reviewer privacy
 
 Published reviews do not show the reviewer's name or institution. Instead, each review carries a short descriptor built from the reviewer's role, institution type, experience, and relationship to the resource, for example "Business librarian · doctoral research university · 10+ years of experience · evaluator/selector."

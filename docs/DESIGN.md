@@ -244,7 +244,7 @@ Grades follow the GPA-style table in Section 7. The editorial board assigns them
 - Up to three rows, in this fixed order: Researchers; Teaching / Students; Commercial / Industry / Entrepreneurs. Audiences the reviewer didn't rate are left out; if none were rated, the block is omitted.
 - Each row: audience label, a three-segment meter (34 x 10px segments, filled primary or empty `--color-rule`), and the text label (Low, Average, High) in bold primary.
 - The meter is `aria-hidden`; the text label carries the meaning.
-- Small heading above the rows: "Reviewer's relevancy ratings".
+- Small heading above the rows: "Reviewer's relevancy ratings", followed by a one-line note in small secondary text: "Anecdotal, based on this reviewer's experience. What these ratings mean" (the last four words link to the Editorial Policy, `#relevancy-ratings`).
 
 ### 5.7 Reviews section
 
@@ -279,7 +279,7 @@ Single reading column (720px) under an intro band holding the h1 "About BISdex" 
 
 - Intro band with the h1.
 - Two-column layout on wide screens: an "On this page" sidebar (220 to 260px, 2px primary rule above, not sticky) and the article (720px). The sidebar stacks above the article on narrow screens.
-- Sections with anchors: Purpose and scope; Core principles; Who may submit and what we expect; Use of generative AI; How reviews are moderated (`#how-reviews-are-moderated`, which defines "Verified by BISdex editors"); Reviewer privacy (`#reviewer-privacy`); Fair treatment of reviews (includes vendor responses); Declined and removed reviews; Updating a review; Accessibility grades (`#accessibility-grades`); Corrections and concerns; Disclaimer (one line linking to the Disclaimer page); Contact.
+- Sections with anchors: Purpose and scope; Core principles; Who may submit and what we expect; Use of generative AI; How reviews are moderated (`#how-reviews-are-moderated`, which defines "Verified by BISdex editors"); Relevancy ratings (`#relevancy-ratings`: the three audiences and the Low, Average, High scale); Reviewer privacy (`#reviewer-privacy`); Fair treatment of reviews (includes vendor responses); Declined and removed reviews; Updating a review; Accessibility grades (`#accessibility-grades`); Corrections and concerns; Disclaimer (one line linking to the Disclaimer page); Contact.
 - **Grade table:** real `<table>` with a `<caption>`, `<th scope="col">`, a 2px primary rule under the header, alternating surface striping, and a logo-gray divider between the two score/grade column pairs. Wrapped in a horizontally scrollable box on narrow screens.
 
 | Score | Grade | Score | Grade |
