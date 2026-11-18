@@ -33,10 +33,9 @@ content:
   - name: Ecommerce Insights
     description: Detailed information for 39,000+ online stores and marketplaces, including 70+ KPIs per store and revenue analytics and forecasts.
 aiFeatures: >-
-  Statista has introduced a Research AI search tool. Learn more at
-  statista.com/help/research-ai. When searching in Statista, there is the use
-  of AI to summarize results in the sidebar, and allows the user to "continue
-  in Research AI Chat.”
+  Statista offers [Statista Research AI](https://www.statista.com/research-ai/help),
+  an AI search tool. Statista search results include an AI-generated summary in
+  the sidebar, with an option to continue in Research AI Chat.
 accessibility:
   grade: B
   laaUrl: https://www.libraryaccessibility.org/evaluation/statista
