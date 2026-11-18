@@ -1,6 +1,6 @@
 ---
 title: "BISdex Editorial Policy"
-lead: "Updated Nov 16, 2026"
+lead: "Updated November 2026"
 ---
 
 ## Purpose and scope
@@ -18,7 +18,7 @@ Four commitments guide every editorial decision.
 
 ## Who may submit and what we expect
 
-Only librarians or information professionals who have used a resource may review it. Vendors, their employees, and anyone paid or rewarded by a vendor may not submit reviews.
+Only librarians or information professionals who have used a resource may review it. The following may not submit reviews, because each has a conflict of interest: vendors; their current and former employees; employees of competing vendors; and anyone paid or rewarded by a vendor.
 
 A review must:
 
@@ -30,13 +30,11 @@ We encourage specific examples, such as a research task the resource handled wel
 
 ## Use of generative AI
 
-You may use generative AI tools to help organize or polish a review, as long as the experience and opinions are your own.
+You may use generative AI tools to copyedit a review, for example to fix grammar, spelling, or clarity. You may not use them to write it. The experience, observations, and opinions must be your own, in your own words.
 
-- Tell us on the submission form if you used an AI tool and how.
-- Revise any AI-assisted text so it reflects what you actually observed, in your own words.
-- AI-assisted reviews meet the same standards as every other review.
+You do not need to disclose AI used only for copyediting. Every review is held to the standards of research integrity expected of librarians: accurate, honest, and based on your own use of the resource.
 
-Reviews written mainly by AI, or describing experiences the reviewer did not have, will be rejected.
+Reviews written by AI, or describing experiences the reviewer did not have, will be rejected.
 
 ## How reviews are moderated
 
@@ -66,12 +64,19 @@ We apply the same standards to every review, whether it praises a resource or cr
 - We do not hide, delay, or bury critical reviews.
 - Vendors cannot pay for or request removal of specific reviews.
 - A review is declined only for failing this policy, never for its tone or conclusion.
+- BISdex does not offer payment, gifts, or any other incentive for reviews.
+
+Vendors may respond to a review by emailing BISdex. Editors read each response and decide whether to publish it alongside the review.
 
 ## Declined and removed reviews
 
 If a review is declined or later removed, we will tell the reviewer why by email. Reviewers may revise and resubmit.
 
 We may remove a published review that we learn breaks this policy, for example one that turns out to be fake or to contain a false statement of fact.
+
+## Updating a review
+
+Because published reviews are anonymous, reviewers cannot edit or withdraw them directly. A reviewer who wants to update a review may submit a new one through the review form. Editors will decide whether it replaces the earlier review or appears as an additional review.
 
 ## Accessibility grades
 
