@@ -494,6 +494,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Editorial Policy Reviewer privacy: descriptor example dropped · none
 - 2026-11-17 · operator request · Review layout B3: reviewer panel beside the text with labeled details, badge and compact relevancy ratings · none
 - 2026-11-17 · operator request · Editorial Policy Relevancy ratings section (audiences and scale); note under each review's ratings links to it; Q8 answered · none
 - 2026-11-17 · operator request · Statista Best known for: semicolon before "providing" now a comma · none

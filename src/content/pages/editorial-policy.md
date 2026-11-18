@@ -68,7 +68,7 @@ Each group is rated on a three-point scale:
 
 ## Reviewer privacy
 
-Published reviews do not show the reviewer's name or institution. Instead, each review carries a short descriptor built from the reviewer's role, institution type, experience, and relationship to the resource, for example "Business librarian · doctoral research university · 10+ years of experience · evaluator/selector."
+Published reviews do not show the reviewer's name or institution. Instead, each review shows the reviewer's role, institution type, experience, and relationship to the resource.
 
 Moderators see the reviewer's contact details only so they can follow up. BISdex does not share those details with vendors or the public.
 
