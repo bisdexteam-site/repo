@@ -17,12 +17,10 @@ bestKnownFor: >-
   benchmark performance.
 alternatives:
   - name: Insider Intelligence
-    note: formerly eMarketer
   - name: Passport
   - name: Mintel
   - name: Data Planet
   - name: RKMA Publications
-    note: budget friendly option
 content:
   - name: Market Insights
     description: Market forecast and expert KPIs for 1000+ markets in 190+ countries & territories.

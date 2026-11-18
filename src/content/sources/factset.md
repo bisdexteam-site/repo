@@ -15,10 +15,6 @@ bestKnownFor: |-
   As a differentiator in the financial information marketplace, FactSet news and document search offer advanced search options across key document types, such as company/peer/sector transcripts, investor slides, filings, and internal company research.
 
   In terms of screening capabilities, watchlists, industry sector news, and other charting features, FactSet is probably most similar to LSEG Workspace and S&P Capital IQ Pro. All of these providers offer an abundance of options for customizing dashboards and conducting analysis on deep company and industry-related content.
-
-  Compared to BvD Osiris, the FactSet database includes information on the most public companies in Europe.
-
-  Among international company databases, Osiris and FactSet often include the largest number of observations with accounting items.
 alternatives:
   - name: Bloomberg Terminal
   - name: LSEG Workspace
@@ -26,9 +22,5 @@ alternatives:
   - name: S&P Capital IQ Pro
   - name: BvD Osiris
   - name: D&B Hoovers
-    note: for company profiles & fundamentals
   - name: Mergent Intellect
-    note: for company profiles
-  - name: Mergent Online
-    note: for company profiles
 ---

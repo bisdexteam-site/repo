@@ -217,8 +217,8 @@ Every section uses the same pattern:
 |---|---|---|---|
 | 1 | Source | (page top) | Name, last-reviewed date |
 | 2 | Description | `description` | Definition list: **Vendor** (linked to vendor URL), **Best known for** (coverage summary, including coverage claims) |
-| 3 | Alternatives | `alternatives` | List of similar or budget-friendly sources. Names in BISdex link to their source page; others show "Not yet in BISdex" in secondary text. An optional short note after each name. |
-| 4 | Content | `content` | Definition list: product or module name (bold, primary) with a short description |
+| 3 | Alternatives | `alternatives` | List of similar or budget-friendly sources, names only. Names in BISdex link to their source page; others show "Not yet in BISdex" in secondary text. No notes or qualifiers under names. |
+| 4 | Content | `content` | Definition list: product or module name (bold, primary) with a short description. Content a vendor licenses from other publishers is one item named "Partner content", described in one sentence: "Reports from [Publisher], [Publisher], and [Publisher]." |
 | 5 | AI Features | `ai` | Prose description |
 | 6 | Use Cases | `usecases` | Two groups with h3 headings, side by side on wide screens: **Teaching and Instruction**; **Commercial and Industry** |
 | 7 | Accessibility | `accessibility` | See 5.5 |
@@ -322,6 +322,8 @@ Same template as About (intro band with h1, single 720px column, no lead paragra
 - Reviewer descriptors use only the fixed dropdown values from the review form, separated by " · ". No free text.
 - Placeholders in brackets appear only during the build; production pages never show bracketed text.
 - No em dashes in site copy.
+- Sunsetted (discontinued) products are not listed anywhere on the site, including Alternatives.
+- Time-bound comparisons and claims (for example, which database covers the most companies) belong in a dated review, not in Description.
 
 ---
 

@@ -4,36 +4,19 @@ lastReviewed: "2026-05"
 vendor: ibisworld
 bestKnownFor: >-
   IBISWorld contains industry reports written by in-house analysts for a wide
-  range of industries and a growing number of geographies (as of May 2026 they
-  cover 42 countries) focused in North America, Europe (including the U.K.),
-  and Australasia. They also cover China and Global. They have U.S. reports at
+  range of industries in 40+ countries, focused in North America, Europe
+  (including the U.K.), and Australasia. They also cover China and Global. They have U.S. reports at
   the NAICS-code level (e.g. Drug, Cosmetic & Toiletry Wholesaling) as well as
   ones that are more granular (e.g. Allergy Medicine Manufacturing OTC). They
   also have state and provincial-level reports for all of the U.S. and Canada.
-  A platform upgrade in late 2023 added detailed "call prep" questions that
-  will be useful to students preparing for informational or job interviews.
+  Reports also include "call prep" questions.
 alternatives:
   - name: FirstResearch
-    note: fairly similar to IBISWorld in terms of US based NAICS-industry report coverage
   - name: MarketLine
-    note: has a wide variety of content, including US-based industry reports
   - name: Mintel
-    note: market report provider; can often be used in similar ways
   - name: BCC Research
     source: bcc-research
-    note: market report provider; can often be used in similar ways
   - name: MarketResearch.com
-    note: market report provider; can often be used in similar ways
-  - name: GlobalData Power
-    note: industry-specific platform; will also have similar content and be more targeted to that industry
-  - name: SNL Energy
-    note: industry-specific platform; will also have similar content and be more targeted to that industry
-  - name: Business Source products
-    note: includes industry reports from other vendors like MarketLine
-  - name: ProQuest One Business & ABI/INFORM
-    note: includes industry reports from other vendors like Fitch Solutions, FirstResearch
-  - name: CFRA Industry Surveys
-    note: available in S&P products like NetAdvantage and Capital IQ
 content:
   - name: Industry Reports
     description: global, country-specific, and for the U.S. and Candata state/provincial-specific

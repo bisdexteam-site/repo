@@ -485,6 +485,8 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 | 2026-11-17 | Statista: vendor "Statista, Inc."; Alternatives restructuring approved ("Insider Intelligence" + note "formerly eMarketer"; RKMA Publications + note "budget friendly option", URL dropped). (operator) |
 | 2026-11-17 | Editorial Policy gains an "Accessibility grades" section before "Corrections and concerns", with the grade scale as an HTML table (caption, column headers, two score/grade pairs). Drafted by an agent at the operator's request, not editors' text. Grade links point to `#accessibility-grades` (the heading's generated anchor), replacing `#grades`. (operator) |
 | 2026-10-19 | Accessibility lint uses `eslint-plugin-jsx-a11y-x` with the plugin's `jsx-a11y-strict` config; `eslint-plugin-jsx-a11y` doesn't support ESLint 10. Prettier skips `docs/`, `src/content/`, `PLAN.md` and `CLAUDE.md` so editors' and reviewers' text is never reformatted. |
+| 2026-11-17 | The four launch reviews are beta content from the same reviewer as their source text. For this build cycle only, the operator may move that reviewer's text between Description and the review; this is an exception to the never-edit rule for reviews. (operator) |
+| 2026-11-17 | Alternatives are names only (link or "Not yet in BISdex"); sunsetted products are not listed; partner content is one "Partner content" item. (operator) |
 
 ---
 
@@ -492,6 +494,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Source page audit: Alternatives notes removed on all sources; Mergent Online removed (sunsetted); BCC Research partner content reworded; FactSet Osiris comparison moved into its review; IBISWorld 40+ countries, call prep sentence shortened, five alternatives parked in docs/parked-content.md · operator to supply Content item links
 - 2026-11-17 · operator request · Disclaimer: "obtain it" now "obtain content" (page and handover record) · none
 - 2026-11-17 · operator request · Editorial Policy: generative AI section restored to its bulleted form, adding that copyediting-only AI use needs no disclosure and that reviews are held to librarians' research integrity standards · none
 - 2026-11-17 · operator request · Editorial Policy: date now "Updated November 2026"; conflicts cover former employees and competitors; no incentives; vendor responses reviewed by editors; new Updating a review section; AI limited to copyediting with no disclosure needed · Q9

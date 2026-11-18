@@ -15,13 +15,12 @@ alternatives:
   - name: Frost & Sullivan
   - name: Gartner
   - name: CB Insights
-    note: Industry Reports
   - name: Forrester
   - name: BMI from Fitch Solutions
   - name: Plunkett Research
 content:
   - name: Partner content
-    description: from The Business Research Company, Verified Market Research, Barnes Reports, Primary Research Group
+    description: Reports from The Business Research Company, Verified Market Research, Barnes Reports, and Primary Research Group.
 accessibility:
   laaUrl: https://libraryaccessibility.org/node/159?q=%2Fnode%2F159
 ---
