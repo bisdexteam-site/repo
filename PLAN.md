@@ -413,6 +413,7 @@ Status: `[ ]` todo · `[x]` done. Run tasks in order unless the dependencies all
 | Q7 | Web Analytics beacon token (Web Analytics > Add a site, hostname = the `workers.dev` address, then the token from the snippet under Manage site) | Operator | P7-T1 |
 | Q8 | Editorial Policy section explaining reviewers' relevancy ratings (the three audiences and what Low, Average and High mean). Operator will circle back | Operator | Nothing; the ratings already display on reviews |
 | Q9 | How a published vendor response looks on a source page (the Editorial Policy now allows them; no design or content field exists yet). | Operator | Nothing until a vendor responds |
+| Q10 | Tabled by the operator 2026-11-17: link first mentions of ALA, RUSA, BRASS and the committee; one full attribution chain on About; Cite this page (P4-T4) on hold; Disclaimer wording to confirm with the RUSA office before launch | Operator | Nothing now |
 
 
 ### 9.1 Reviewer descriptors: form options and deviations
@@ -494,6 +495,7 @@ Revisit with the operator before launch. Until then, new reviews use the descrip
 
 One line per finished task, newest first: `YYYY-MM-DD · P#-T# · what changed · follow-ups`.
 
+- 2026-11-17 · operator request · Design canvas page mockups (Home, IBISWorld, About, Editorial Policy, Disclaimer) regenerated from live content and styles · Look and feel board still shows the old title sizes
 - 2026-11-17 · operator request · IBISWorld Content links removed; Statista alternative renamed "EMARKETER (formerly Insider Intelligence)" · FactSet Description still says Insider Intelligence (asked operator)
 - 2026-11-17 · operator request · Statista Best known for: second sentence opens "It provides" · none
 - 2026-11-17 · operator request · Statista Best known for: opening sentence reworded, sources now 50,000+ (operator figure) · none
